@@ -1,0 +1,15 @@
+{
+  "name": "jaipur",
+  "version": "1.0.0",
+  "description": "CIS Jaipur",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "Jaipur",
+    "Campus"
+  ],
+  "author": "Vedant",
+  "license": "ISC"
+}
