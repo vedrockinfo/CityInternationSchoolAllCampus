@@ -1,0 +1,214 @@
+.years-section{
+    .container{
+        .row{
+            &:nth-child(2){
+                flex-direction: row-reverse;
+                padding: 7rem 0;
+            }
+            h2{
+                margin-bottom: 2rem;
+            }
+            .camb-content{
+                position: relative;
+                @include respond (tab-port-before){
+                    margin-top: 3rem;
+                    text-align: center;
+                    .serial-no{
+                        top: 5rem!important;
+                    }
+                }
+                .serial-no{
+                    position: absolute;
+                    top: 0;
+                    left: 2rem;
+                    font-size: 15rem;
+                    font-weight: 900;
+                    color: $colorSecondary;
+                    line-height: 0;
+                    z-index: -1;
+                    opacity: 0.4;
+                }
+            }
+        }
+    }
+}
+.call-to-action{
+    background: $colorPrimary;
+    padding: 10rem 0;
+    position: relative;
+    @include respond(tab-land-before){
+      padding: 7rem;
+    }
+    @include respond(tab-port-before){
+      padding: 4rem;
+    }
+    .container{
+        position: relative;
+    }
+    &::before{
+        content: "";
+        background: $colorPrimary;
+        border-left: 3rem solid;
+        border-color: $colorTertiary;
+        height: 100%;
+        aspect-ratio: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        border-radius: 0% 0 0 80%;
+        opacity: 0.2;
+    }
+    &::after{
+        content: "";
+        background: $colorTertiary;
+        position: absolute;
+        height: 40%;
+        aspect-ratio: 1;
+        bottom: 4rem;
+        left: 3rem;
+        border-radius: 50%;
+        opacity: 0.2;
+        z-index: 0;
+        
+    }
+    .call-data{
+         @include respond (tab-port-before){
+                   text-align: center;
+                }
+        h4{
+            line-height: 1.25em;
+            text-align: left;
+            margin-bottom: 2rem;
+            text-transform: capitalize;
+            font-size: 3.6rem;
+            font-weight: 700;
+            color: $colorWhite;
+            @include respond(tab-port-before){
+            margin-bottom: 1.6rem;
+            font-size: 30px;
+            }
+            @include respond(phone-before){
+            margin-bottom: 2rem;
+            font-size: 24px;
+            }
+            @include respond (tab-port-before){
+                   text-align: center;
+                }
+        }
+        p{
+            color: $colorWhite;
+        }
+    }
+    .call-link{
+        width: 100%;
+         @include respond (tab-port-before){
+                   margin-top: 3.5rem;
+                }
+        a{
+            display: block;
+    width: fit-content;
+    margin: auto;
+        }
+    }
+}
+.cambridge-slider{
+    .content-para{
+        @media screen and (min-width:1200px) {
+        padding: 0 130px;
+    }
+    }
+    .cambride-carousel{
+        margin-top: 6rem;
+        .owl-nav {
+            position: absolute;
+            top: -4rem;
+            right: 0;
+            button span {
+                color: $colorWhite;
+                background: $colorPrimary;
+                line-height: 1;
+                width: 3rem;
+                display: flex;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                justify-content: center;
+                font-size: 2rem;
+                padding: 3.5px;
+            }
+
+            button.owl-prev {
+                margin-right: 1rem;
+            }
+        }
+        @media screen and (max-width:1199.9px) {
+            .primary-students{
+            position: relative;
+            img{
+                min-height: 200px;
+                object-fit: cover;
+                object-position: center;
+            }
+            &__hidden-content{
+                background: $colorPrimary;
+                color: $colorWhite;
+                padding: 1.5rem;
+                text-align: center;
+                h5 {
+                    font-size: 1.8rem;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        }
+        @media screen and (min-width:1200px) {
+            .primary-students{
+            position: relative;
+            img{
+                min-height: 250px;
+                object-fit: cover;
+                object-position: center;
+            }
+            &:hover{
+                .primary-students__hidden-content{
+                    top: 50%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+                &::before{
+                    transform: scale(1);
+                }
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba($colorPrimary, 0.9);
+                transform: scale(0);
+                transition: 1s cubic-bezier(.01,.97,1,.8);
+            }
+            &__hidden-content{
+                position: absolute;
+                top: 100%;
+                opacity: 0;
+                visibility: hidden;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                width: calc(100% - 5rem);
+                color: $colorWhite;
+                transition: 1s cubic-bezier(.01,.97,1,.8);
+                h5 {
+                    font-size: 1.8rem;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "cis",
+  "version": "1.0.0",
+  "description": "CIS Main ",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "CIS"
+  ],
+  "author": "Vedant",
+  "license": "ISC"
+}

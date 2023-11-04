@@ -1,0 +1,39 @@
+
+.faqs-vertical-tab{
+   .vertical-tabs{
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            }
+
+            .tab {
+            background-color: $colorSecondary;
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            }
+
+            .tab.active {
+                color: $colorWhite;
+            background-color: $colorPrimary;
+            }
+
+            .tab-content .content {
+            display: none;
+            padding: 3rem;
+            border: 1px solid $colorSecondary;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            h6.heading-fac {
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+            }
+            .content-para:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+            }
+
+            .tab-content .active {
+            display: block;
+            }
+    }
+}

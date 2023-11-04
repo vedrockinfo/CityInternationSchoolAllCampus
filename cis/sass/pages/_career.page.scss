@@ -1,0 +1,85 @@
+.career-area{
+    .careers-card{
+        background: $colorPrimary;
+        border-radius: 10px;
+        padding: 10rem 4rem 4rem 4rem;
+        position: relative;
+        h4.heading-fourth {
+            position: absolute;
+            top: 4rem;
+            background:$colorWhite;
+            left: -10px;
+            padding: 1rem 2rem 1rem 4rem;
+            &::before{
+                background-color: $colorBlack;
+    position: absolute;
+    left: 3.5px;
+    bottom: -10px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    z-index: -1;
+    content: "";
+            }
+        }
+        ul{
+            display: flex;
+            gap:10px;
+            margin-top: 3rem;
+            li{
+                a{
+                    color: $colorWhite;
+                    border: 1px solid $colorWhite;
+                    width: 4rem;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    display: grid;
+                    place-content: center;
+                    transition: $transition;
+                    &:hover{
+                        background: $colorWhite;
+                        color: $colorPrimary;
+                    }
+                }
+            }
+        }
+    }
+}
+.reinforcing-habits{
+    .vertical-tabs{
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            }
+
+            .tab {
+            background-color: $colorSecondary;
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            }
+
+            .tab.active {
+                color: $colorWhite;
+            background-color: $colorPrimary;
+            }
+
+            .tab-content .content {
+            display: none;
+            padding: 3rem;
+            border: 1px solid $colorSecondary;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            h6.heading-fac {
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+            }
+            .content-para:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+            }
+
+            .tab-content .active {
+            display: block;
+            }
+    }
+}
