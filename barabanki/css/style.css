@@ -290,6 +290,9 @@ h2.primary-heading {
       right: 0;
       top: 0;
       font-size: 20px; }
+  .admission-form .text-center strong {
+    color: #8e4bff;
+    cursor: pointer; }
 
 footer {
   background: #545775;
