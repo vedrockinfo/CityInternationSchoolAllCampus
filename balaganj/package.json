@@ -1,0 +1,15 @@
+{
+  "name": "balaganj",
+  "version": "1.0.0",
+  "description": "CIS Balaganj",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "Balaganj",
+    "Campus"
+  ],
+  "author": "Vedant",
+  "license": "ISC"
+}
