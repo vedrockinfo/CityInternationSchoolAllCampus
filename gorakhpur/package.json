@@ -1,0 +1,15 @@
+{
+  "name": "gorakhpur",
+  "version": "1.0.0",
+  "description": "CIS Gorakhpur",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "Gorakhpur",
+    "Campus"
+  ],
+  "author": "Vedant",
+  "license": "ISC"
+}
