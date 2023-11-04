@@ -1,0 +1,42 @@
+@mixin clearfix {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+@mixin GlobalButtonOne{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: $colorPrimary;
+    color: $colorWhite;
+    display: inline-block;
+    padding: 8px 20px;
+    border: 2px solid $colorPrimary;
+    transition: $transition;
+    border-radius: 30px;
+    &:hover{
+        background: transparent;
+        color: $colorPrimary;
+        border: 2px solid $colorPrimary;
+    }
+}
+@mixin GlobalButtonTwo{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: $colorWhite;
+    color: $colorPrimary;
+    display: inline-block;
+    padding: 8px 20px;
+    border: 2px solid $colorWhite;
+    transition: $transition;
+    border-radius: 30px;
+    &:hover{
+        background: transparent;
+        color: $colorWhite;
+        border: 2px solid $colorWhite;
+    }
+}

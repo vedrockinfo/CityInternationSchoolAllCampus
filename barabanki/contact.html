@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaders Conclave</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <!-- <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet"> -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/owlcarousel/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="loader">
+        <div class="loader-spinner">
+            <img src="images/loader.gif" alt="">
+        </div>
+    </div>
+    <main>
+        <section class="inner-hero-section">
+            <div class="container">
+                <h1 class="hero-primary-heading">Contact Us</h1>
+            </div>
+        </section>
+        <section class="contact-page mt-large">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="wrapper">
+                            <div class="row mb-5">
+                                <div class="col-md-3">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-map-marker"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Address:</span> Chandrahaas Palace, Surajpur Estate, Hathaundha,
+                                                Ghaat, Ram Sanehi Ghat, Uttar Pradesh 225405
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-phone"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span class="d-block">Phone</span> <a href="tel://7408403000">+91 740 840
+                                                    3000</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-paper-plane"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span class="d-block">Email</span> <a
+                                                    href="mailto: barabanki@ciseducation.org,">
+                                                    barabanki@ciseducation.org,</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-globe"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><span class="d-block">Website</span> <a
+                                                    href="http://barabanki.ciseducation.org/">www.barabanki.ciseducation.org</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-md-7">
+                                    <div class="contact-wrap w-100 p-md-5 p-4">
+                                        <h3 class="heading-fourth">Contact Us</h3>
+                                        <div id="form-message-warning" class="mb-4"></div>
+                                        <div id="form-message-success" class="mb-4">
+                                            Your message was sent, thank you!
+                                        </div>
+                                        <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label" for="name">Full Name</label>
+                                                        <input type="text" class="form-control" name="name" id="name"
+                                                            placeholder="Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="label" for="email">Email Address</label>
+                                                        <input type="email" class="form-control" name="email" id="email"
+                                                            placeholder="Email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="label" for="subject">Subject</label>
+                                                        <input type="text" class="form-control" name="subject"
+                                                            id="subject" placeholder="Subject">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="label" for="#">Message</label>
+                                                        <textarea name="message" class="form-control" id="message"
+                                                            cols="30" rows="4" placeholder="Message"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="submit" value="Send Message" class="btn btn-one">
+                                                        <div class="submitting"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 d-flex align-items-stretch">
+                                    <div class="info-wrap w-100 p-5 img"
+                                        style="background-image: url(images/drbharti.jpg);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="map-area mt-large">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d455635.4656068439!2d80.99399146668809!3d26.851016368608967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a2cec60d820cd%3A0x5a8cf8a659c3a322!2sCity%20International%20School%20(CIS)%2C%20Barabanki!5e0!3m2!1sen!2sin!4v1613037249700!5m2!1sen!2sin"
+                width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </section>
+    </main>
+    <div id="footer" class="barabanki-contact"></div>
+
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/owlcarousel/js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

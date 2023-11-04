@@ -1,0 +1,9 @@
+.btn-one{
+    @include GlobalButtonOne();
+}
+.btn-two{
+    @include GlobalButtonTwo();
+}
+.btn-links{
+    margin-top: 30px;
+}

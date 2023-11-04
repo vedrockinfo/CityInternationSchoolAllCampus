@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    // This defines what 1rem is
+    font-size: 62.5%;
+  }
+  body{
+    background-color: $colorWhite;
+    overflow-x: hidden;
+  }
+  a{
+    text-decoration: none;
+  }
+  ul{
+    list-style: none;
+  }
+  .barabanki-contact{
+    footer{
+      margin-top: 0;
+    }
+  }
