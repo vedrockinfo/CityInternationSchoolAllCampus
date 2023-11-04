@@ -1,0 +1,97 @@
+.top-header{
+    background: $colorPrimary;
+    padding: 10px 0;
+    .col-md-4:last-child{
+        text-align: right;
+    }
+    .social-media{
+        color: $colorWhite;
+        display: inline-flex;
+        ul{
+            margin-bottom: 0;
+            li{
+                display: inline-block;
+                line-height: 1;
+                &:not(:last-child){
+                    padding-right: 8px;
+                }
+                a{
+                    color: $colorWhite;
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .top-navigation {
+       ul{
+        margin-bottom: 0;
+        padding-left: 0;
+        li{
+            display: inline-block;
+            line-height: 1;
+            &:not(:last-child){
+                padding-right: 8px;
+                margin-right: 8px;
+                border-right: 1px solid rgba($colorWhite, $alpha: 0.5);
+            }
+            a{
+                color: $colorWhite;
+                text-transform: capitalize;
+                font-size: 14px;
+            }
+        }
+       }
+    }
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    transition: $transition;
+    background: rgba($colorWhite, $alpha: 1);
+    &.fixed-header{
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    .navbar-brand{
+        img{
+            width: 14rem;
+        }
+    }
+    .navbar-nav{
+        li.nav-item{
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+            a{
+                font-size: 14px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+            &.admission{
+                background: $colorPrimary;
+                @media screen and (min-width:992px) {
+                    margin-left: 15px;
+                }
+                border: 2px solid $colorPrimary;
+                transition: $transition;
+                border-radius: 10px;
+                &:hover{
+                    background: transparent;
+                    a{
+                        color: $colorPrimary;
+                    }
+                }
+                a{
+                    color: $colorWhite;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}
