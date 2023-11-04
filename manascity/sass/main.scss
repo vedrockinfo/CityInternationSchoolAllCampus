@@ -1,0 +1,25 @@
+@import "./abstract/function";
+@import "./abstract/mixins";
+@import "./abstract/responsive";
+@import "./abstract/varaiables";
+
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+
+@import "./components/button";
+@import "./components/hero-form";
+
+@import "./layout/footer";
+@import "./layout/header";
+
+@import "./pages/about";
+@import "./pages/azadimahotsav";
+@import "./pages/career";
+@import "./pages/contact-page";
+@import "./pages/gallery";
+@import "./pages/home";
+@import "./pages/news";
+@import "./pages/onlinefees";
+@import "./pages/registration";
+@import "./pages/rules-regulations";
