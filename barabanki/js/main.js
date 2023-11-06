@@ -17,6 +17,3 @@ jQuery(function () {
 window.addEventListener('load', function () {
   document.getElementById('loader').style.display = 'none';
 });
-jQuery(document).getElementById('login').click(function () {
-  jQuery('admission-form').addClass('logined');
-});
