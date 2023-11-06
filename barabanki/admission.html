@@ -101,7 +101,7 @@
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div class="admission-form">
-                            <div class="signup-form">
+                            <div class="login-form">
                                 <h4 class="heading-fourth text-center">Registration Form</h4>
                                 <form>
                                     <div class="form-group">
@@ -137,21 +137,37 @@
                                     <div class="form-group text-center">
                                         <button type="submit" class="btn btn-one mt-0">Apply Now</button>
                                     </div>
-                                    <div class="text-center mt-3">
+                                    <div class="text-center mt-5">
                                         <p>Already have an account? <strong id="login">Login</strong></p>
                                     </div>
                                 </form>
                             </div>
-                            <div class="login-form">
+                            <div class="signup-form">
                                 <h4 class="heading-fourth text-center">Login Form</h4>
                                 <form>
-                                    <div class="form-group">
+                                    <div class="form-group" id="mobile-number">
                                         <input type="text" class="form-control" id="fname" placeholder="Phone Number">
                                     </div>
-                                    <div class="form-group text-center">
-                                        <button type="submit" class="btn btn-one mt-0">Send OTP</button>
+                                    <div class="form-group" id="verify-number">
+                                        <div class="verify-row">
+                                            <span id="backtonumber" class="backnum"><i
+                                                    class="fa-solid fa-arrow-left"></i></span>
+                                            <a href="#" target="_blank" class="help"><i
+                                                    class="fa-solid fa-circle-info"></i></a>
+                                        </div>
+                                        <span class="otp-sent">Enter the 6-digit OTP received on 90****3715</span>
+                                        <input type="text" class="form-control" id="otpNum" placeholder="Enter OTP"
+                                            required>
+                                        <span class="resend" id="resend-otp">Resend OTP</span>
+                                        <span class="otp-resent" id="otp-resent">OTP has been resent to your
+                                            Phone!</span>
                                     </div>
-                                    <div class="text-center mt-3">
+                                    <div class="form-group text-center">
+                                        <button type="button" class="btn btn-one mt-0" id="send-otp">Send
+                                            OTP</button><button type="button" class="btn btn-one mt-0"
+                                            id="verify-otp">Verify</button>
+                                    </div>
+                                    <div class="text-center mt-5">
                                         <p>Don't have an account? <strong id="signup">Signup</strong></p>
                                     </div>
                                 </form>

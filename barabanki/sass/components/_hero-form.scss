@@ -53,4 +53,43 @@
         cursor: pointer;
     }
    }
+   .verify-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    .help{
+        cursor: pointer;
+        color: $colorPrimary;
+    }
+    .backnum{
+        cursor: pointer;
+        color: $colorPrimary;
+    }
+}
+.resend{
+    text-align: right;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    display: block;
+    color: $colorPrimary;
+    cursor: pointer;
+    transition: $transition;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+span.otp-sent {
+    font-size: 1.2rem;
+}
+.otp-resent {
+    position: fixed;
+    top: 10rem;
+    right: 2rem;
+    background: $colorPrimary;
+    color: $colorWhite;
+    padding: 4px 20px;
+    font-size: 1.4rem;
+    z-index: 99;
+}
 }
