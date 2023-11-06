@@ -36,7 +36,7 @@ jQuery(window).scroll(function () {
 $('.owl-carousel').owlCarousel({
   loop: true,
   margin: 30,
-  nav: false,
+  nav: true,
   autoplay: 3000,
   dots: true,
   responsive: {
@@ -44,10 +44,10 @@ $('.owl-carousel').owlCarousel({
       items: 1
     },
     600: {
-      items: 2
+      items: 1
     },
     1000: {
-      items: 3
+      items: 1
     }
   }
 })

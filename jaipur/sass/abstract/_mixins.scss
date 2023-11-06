@@ -7,30 +7,70 @@
   }
 
 @mixin GlobalButtonOne{
-    font-size: 15px;
-    padding: 10px 24px;
-    line-height: 1;
-    text-transform: capitalize;
-    border: 1.9px solid $colorWhite;
+    background-color: $colorPrimary;
+    color: #fff;
+    font-size: 16px;
+    padding: 13px 35px;
+    border-radius: 0;
+    position: relative;
+    transition: all ease .5s;
+    border: 1px solid $colorPrimary;
+    z-index: 1;
+    &::before {
+    position: absolute;
+    content: "";
+    background-color: $colorSecondary;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: all ease .5s;
+    z-index: -1;
+}
+&:hover{
     color: $colorWhite;
-    transition: $transition;
-    &:hover{
-        color: $colorPrimary;
-        background: $colorWhite!important;
+    &::before{
+        transform: scaleX(1);
     }
 }
+&:active, &:focus-visible{
+    color: $colorWhite!important;
+}
+}
 @mixin GlobalButtonTwo{
-    font-size: 15px;
-    padding: 10px 24px;
-    line-height: 1;
-    text-transform: capitalize;
-    border: 1.9px solid $colorPrimary;
-    background: $colorPrimary;
+    background-color: $colorPrimary;
+    color: #fff;
+    font-size: 16px;
+    padding: 13px 35px;
+    border-radius: 0;
+    position: relative;
+    transition: all ease .5s;
+    border: 1px solid $colorPrimary;
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: 500;
+    &::before {
+    position: absolute;
+    content: "";
+    background-color: $colorSecondary;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: all ease .5s;
+    z-index: -1;
+}
+&:hover{
     color: $colorWhite;
-    transition: $transition;
-    display: inline-block;
-    &:hover{
-        color: $colorPrimary;
-        background: transparent;
+    &::before{
+        transform: scaleX(1);
     }
+}
+&:active, &:focus-visible{
+    color: $colorWhite!important;
+}
 }

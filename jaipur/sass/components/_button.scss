@@ -1,6 +1,7 @@
-.global-btn-one{
+.btn-default{
     @include GlobalButtonOne();
+    width: 100%;
 }
-.global-btn-two{
+.btn-default-two{
     @include GlobalButtonTwo();
 }
