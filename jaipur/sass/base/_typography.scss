@@ -124,6 +124,13 @@ body {
     color: $colorSecondary;
     text-transform: capitalize;
 }
+
+h6.heading-six {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25em;
+    color: $colorPrimary;
+}
 .content-para p, .content-para li {
   font-size: 18px;
   line-height: 32px;

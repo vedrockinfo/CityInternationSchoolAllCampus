@@ -228,6 +228,14 @@
     }
 }
 .our-campus{
+    @media screen and (min-width:768px) {
+        h2{
+            text-align: left;
+        }
+        .col-md-7{
+            padding-left: 4rem;
+        }
+    }
     .campus-card{
         box-shadow: 0 0 20px 3px rgba(0,0,0,.05);
         background: $colorWhite;
@@ -243,10 +251,16 @@
             }
         }
         &__content{
-            padding: 3rem;
+            padding: 3rem 0 3rem 0;
             span{
-                display: block;
+                display: none;
                 text-align: right;
+                a{
+                border: 1px solid $colorSecondary;
+                color: $colorSecondary;
+    padding: 7px 20px;
+    border-radius: 30px;
+            }
             }
         }
     }

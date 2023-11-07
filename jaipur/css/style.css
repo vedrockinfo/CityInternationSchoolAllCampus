@@ -153,6 +153,12 @@ h2.primary-heading {
   color: #111d5e;
   text-transform: capitalize; }
 
+h6.heading-six {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25em;
+  color: #e32845; }
+
 .content-para p, .content-para li {
   font-size: 18px;
   line-height: 32px;
@@ -604,6 +610,12 @@ header {
   .leadership .leadership-card__body .text-center {
     margin-top: 2rem; }
 
+@media screen and (min-width: 768px) {
+  .our-campus h2 {
+    text-align: left; }
+  .our-campus .col-md-7 {
+    padding-left: 4rem; } }
+
 .our-campus .campus-card {
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
   background: #fff; }
@@ -614,10 +626,15 @@ header {
       object-fit: cover;
       object-position: top; }
   .our-campus .campus-card__content {
-    padding: 3rem; }
+    padding: 3rem 0 3rem 0; }
     .our-campus .campus-card__content span {
-      display: block;
+      display: none;
       text-align: right; }
+      .our-campus .campus-card__content span a {
+        border: 1px solid #111d5e;
+        color: #111d5e;
+        padding: 7px 20px;
+        border-radius: 30px; }
 
 .our-campus .owl-nav {
   position: absolute;
