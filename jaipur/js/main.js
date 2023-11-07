@@ -33,12 +33,12 @@ jQuery(window).scroll(function () {
 })(jQuery);
 
 
-$('.owl-carousel').owlCarousel({
+$('.owl-carousel-1').owlCarousel({
   loop: true,
   margin: 30,
   nav: true,
   autoplay: 3000,
-  dots: true,
+  navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
   responsive: {
     0: {
       items: 1
@@ -52,24 +52,32 @@ $('.owl-carousel').owlCarousel({
   }
 })
 
-// Including Header Footer
+$(".owl-carousel-2").owlCarousel({
+  items: 4,
+  margin: 20,
+  loop: true,
+  autoplay: false,
+  autoplayTimeout: 4000,
+  nav: true,
+  dots: false,
+  navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 3
+    }
+  }
+})
 
-// function loadContent(file, elementId) {
-//   var xhr = new XMLHttpRequest();
-//   xhr.onreadystatechange = function () {
-//     if (xhr.readyState == 4 && xhr.status == 200) {
-//       document.getElementById(elementId).innerHTML = xhr.responseText;
-//     }
-//   };
-//   xhr.open("GET", file, true);
-//   xhr.send();
-// }
-
-// loadContent("include/header.html", "header");
-// loadContent("include/footer.html", "footer");
-
-// loadContent("../include/campus-header.html", "campus-header");
-// loadContent("../include/campus-footer.html", "campus-footer");
+$(document).ready(function () {
+  $(".owl-carousel-1").owlCarousel();
+  $(".owl-carousel-2").owlCarousel();
+});
 
 
 jQuery(function () {

@@ -34,6 +34,17 @@ a {
 ul {
   list-style: none; }
 
+.owl-nav {
+  position: absolute;
+  top: -40px;
+  right: 0; }
+  .owl-nav button:last-child {
+    margin-left: 6px; }
+  .owl-nav i {
+    color: #fff;
+    background: #e32845;
+    padding: 8px; }
+
 body {
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
@@ -640,13 +651,38 @@ header {
   position: absolute;
   right: 2rem;
   top: 2rem; }
-  .our-campus .owl-nav button span {
-    background: #e32845;
-    margin-left: 5px;
-    aspect-ratio: 1;
-    width: 3rem;
-    display: flex;
-    color: #fff;
-    line-height: 1;
-    align-items: center;
-    justify-content: center; }
+
+.testimonial .item {
+  padding: 15px; }
+
+.testimonial .testimonial-card {
+  box-shadow: 0 0 15px 0 rgba(29, 25, 0, 0.25); }
+  .testimonial .testimonial-card .testim-img {
+    position: relative; }
+    .testimonial .testimonial-card .testim-img img {
+      height: 20rem;
+      object-fit: cover;
+      object-position: top; }
+    .testimonial .testimonial-card .testim-img span.serial {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #e32845;
+      color: #fff;
+      font-size: 5rem;
+      font-weight: 800;
+      width: 8rem;
+      height: 8rem;
+      display: grid;
+      place-content: center; }
+  .testimonial .testimonial-card .testim-content {
+    padding: 30px 20px; }
+    .testimonial .testimonial-card .testim-content h4 {
+      text-align: center;
+      margin-bottom: 2rem; }
+    .testimonial .testimonial-card .testim-content .content-para {
+      text-align: center; }
+      .testimonial .testimonial-card .testim-content .content-para a {
+        margin-top: 2rem; }
+      .testimonial .testimonial-card .testim-content .content-para p {
+        text-align: left; }

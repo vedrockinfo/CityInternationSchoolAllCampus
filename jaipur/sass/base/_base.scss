@@ -16,3 +16,19 @@
   ul{
     list-style: none;
   }
+  
+.owl-nav {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    button{
+      &:last-child{
+        margin-left: 6px;
+      }
+    }
+    i{
+      color: $colorWhite;
+      background: $colorPrimary;
+      padding: 8px;
+    }
+}
