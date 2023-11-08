@@ -55,9 +55,9 @@
     width: 80px;
   }
 }
-.inner-hero-section {
+.inner-hero-area {
     position: relative;
-    min-height: 500px;
+    min-height: 400px;
     display: grid;
     place-content: center;
     background-size: cover;
@@ -66,7 +66,7 @@
     &::before{
       content: "";
       background: #000;
-      opacity: 0.7;
+      opacity: 0.8;
       position: absolute;
       top: 0;
       left: 0;
