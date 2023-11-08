@@ -53,11 +53,12 @@ $('.owl-carousel-1').owlCarousel({
 })
 
 $(".owl-carousel-2").owlCarousel({
-  items: 4,
-  margin: 20,
   loop: true,
-  autoplay: false,
-  autoplayTimeout: 4000,
+  center: true,
+  items: 3,
+  margin: 0,
+  autoplay: true,
+  smartSpeed: 450,
   nav: true,
   dots: false,
   navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
@@ -74,9 +75,31 @@ $(".owl-carousel-2").owlCarousel({
   }
 })
 
+$(".owl-carousel-3").owlCarousel({
+  loop: true,
+  items: 3,
+  margin: 30,
+  autoplay: true,
+  nav: true,
+  dots: false,
+  navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 2
+    }
+  }
+})
+
 $(document).ready(function () {
   $(".owl-carousel-1").owlCarousel();
   $(".owl-carousel-2").owlCarousel();
+  $(".owl-carousel-3").owlCarousel();
 });
 
 

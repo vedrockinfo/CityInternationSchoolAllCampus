@@ -652,37 +652,92 @@ header {
   right: 2rem;
   top: 2rem; }
 
-.testimonial .item {
-  padding: 15px; }
-
-.testimonial .testimonial-card {
-  box-shadow: 0 0 15px 0 rgba(29, 25, 0, 0.25); }
-  .testimonial .testimonial-card .testim-img {
+.testimonial {
+  background: #111d5e;
+  position: relative;
+  padding: 10rem 0; }
+  @media only screen and (max-width: 992px) {
+    .testimonial {
+      padding: 5rem 0; } }
+  @media only screen and (max-width: 768px) {
+    .testimonial {
+      padding: 3rem 0; } }
+  .testimonial::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/propectus-bg.jpg);
+    mix-blend-mode: multiply; }
+  .testimonial .container {
     position: relative; }
-    .testimonial .testimonial-card .testim-img img {
-      height: 20rem;
+  @media screen and (min-width: 768px) {
+    .testimonial h2 {
+      text-align: left;
+      padding-left: 15px;
+      border-left: 6px solid #fff; } }
+  .testimonial .owl-item.active:not(.center) .item {
+    opacity: 1;
+    filter: grayscale(1);
+    transition: 0.4s ease;
+    transform: scale(0.9); }
+  .testimonial .item {
+    padding: 15px; }
+  .testimonial .testimonial-card {
+    box-shadow: 0 0 15px 0 rgba(29, 25, 0, 0.25);
+    background: #fff; }
+    .testimonial .testimonial-card .testim-img {
+      position: relative; }
+      .testimonial .testimonial-card .testim-img img {
+        height: 20rem;
+        object-fit: cover;
+        object-position: top; }
+      .testimonial .testimonial-card .testim-img span.serial {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #e32845;
+        color: #fff;
+        font-size: 5rem;
+        font-weight: 800;
+        width: 8rem;
+        height: 8rem;
+        display: grid;
+        place-content: center; }
+    .testimonial .testimonial-card .testim-content {
+      padding: 30px 20px; }
+      .testimonial .testimonial-card .testim-content h4 {
+        text-align: center;
+        margin-bottom: 2rem; }
+      .testimonial .testimonial-card .testim-content .content-para {
+        text-align: center; }
+        .testimonial .testimonial-card .testim-content .content-para a {
+          margin-top: 2rem; }
+        .testimonial .testimonial-card .testim-content .content-para p {
+          text-align: left; }
+
+.clients-testimonial .clients-voice {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: #f4f6f9;
+  padding: 4rem; }
+  .clients-testimonial .clients-voice .clients-pic {
+    border-radius: 50%;
+    text-align: center; }
+    .clients-testimonial .clients-voice .clients-pic img {
+      border-radius: 50%;
+      width: 10rem;
       object-fit: cover;
-      object-position: top; }
-    .testimonial .testimonial-card .testim-img span.serial {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: #e32845;
-      color: #fff;
-      font-size: 5rem;
-      font-weight: 800;
-      width: 8rem;
-      height: 8rem;
-      display: grid;
-      place-content: center; }
-  .testimonial .testimonial-card .testim-content {
-    padding: 30px 20px; }
-    .testimonial .testimonial-card .testim-content h4 {
-      text-align: center;
-      margin-bottom: 2rem; }
-    .testimonial .testimonial-card .testim-content .content-para {
-      text-align: center; }
-      .testimonial .testimonial-card .testim-content .content-para a {
-        margin-top: 2rem; }
-      .testimonial .testimonial-card .testim-content .content-para p {
-        text-align: left; }
+      object-position: center;
+      height: 10rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      outline: 5px solid #fff;
+      display: inline-block; }
+  .clients-testimonial .clients-voice .clients-data .heading-six {
+    text-transform: uppercase;
+    margin: 30px 0 5px 0;
+    font-size: 1.6rem;
+    text-align: center; }
+  .clients-testimonial .clients-voice .clients-data .heading-five {
+    text-align: center; }
