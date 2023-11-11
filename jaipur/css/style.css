@@ -424,6 +424,9 @@ header {
       padding-right: 30px;
       transition: 0.4s ease; }
 
+h1 {
+  font-size: 37px; }
+
 .hero-area .carousel-inner, .hero-area .carousel {
   height: 100%; }
 
@@ -741,3 +744,7 @@ header {
     text-align: center; }
   .clients-testimonial .clients-voice .clients-data .heading-five {
     text-align: center; }
+
+@media screen and (min-width: 992px) {
+  .teacher-training h2.primary-heading {
+    text-align: left; } }

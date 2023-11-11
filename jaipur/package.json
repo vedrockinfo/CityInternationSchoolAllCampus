@@ -11,5 +11,8 @@
     "Campus"
   ],
   "author": "Vedant",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
 }
