@@ -5,3 +5,41 @@
     }
   }
 }
+.become-teacher {
+  .tab-content {
+    padding: 50px 30px;
+    border: 1px solid;
+    border-top: 0;
+  }
+  .nav-tabs {
+    gap: 1px;
+  }
+  li.nav-item {
+    width: calc(33.3333333% - 1px);
+  }
+  .nav-link {
+    background: $colorSecondary;
+    color: $colorWhite;
+    font-weight: 700;
+    font-size: 1.6rem;
+    width: 100%;
+    padding: 0.6rem;
+    border: none !important;
+    border-radius: 0;
+    &.active {
+      background: $colorPrimary;
+      color: $colorWhite;
+      position: relative;
+      &::before {
+        content: "";
+        background: $colorPrimary;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        bottom: -7.5px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+      }
+    }
+  }
+}
