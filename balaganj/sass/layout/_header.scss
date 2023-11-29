@@ -1,95 +1,104 @@
-.top-header{
-    background: $colorPrimary;
-    padding: 10px 0;
-    .col-md-4:last-child{
-        text-align: right;
-    }
-    .social-media{
-        color: $colorWhite;
-        display: inline-flex;
-        ul{
-            margin-bottom: 0;
-            li{
-                display: inline-block;
-                line-height: 1;
-                &:not(:last-child){
-                    padding-right: 8px;
-                }
-                a{
-                    color: $colorWhite;
-                    i {
-                        font-size: 20px;
-                    }
-                }
-            }
-        }
-    }
-    .top-navigation {
-       ul{
-        margin-bottom: 0;
-        padding-left: 0;
-        li{
-            display: inline-block;
-            line-height: 1;
-            &:not(:last-child){
-                padding-right: 8px;
-                margin-right: 8px;
-                border-right: 1px solid rgba($colorWhite, $alpha: 0.5);
-            }
-            a{
-                color: $colorWhite;
-                text-transform: capitalize;
-                font-size: 14px;
-            }
-        }
-       }
-    }
-}
 header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9;
-    transition: $transition;
-    background: rgba($colorWhite, $alpha: 1);
-    &.fixed-header{
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    }
-    .navbar-brand{
-        img{
-            width: 14rem;
-        }
-    }
-    .navbar-nav{
-        li.nav-item{
-            &:not(:last-child){
-                margin-right: 10px;
-            }
-            a{
-                font-size: 14px;
-                padding-top: 8px;
-                padding-bottom: 8px;
-            }
-            &.admission{
-                background: $colorPrimary;
-                @media screen and (min-width:992px) {
-                    margin-left: 15px;
-                }
-                border: 2px solid $colorPrimary;
-                transition: $transition;
-                border-radius: 10px;
-                &:hover{
-                    background: transparent;
+    .top-header{
+        background: $colorSecondary;
+        padding: 10px 0;
+        .social-media{
+            color: $colorWhite;
+            display: inline-flex;
+            ul{
+                margin-bottom: 0;
+                li{
+                    display: inline-block;
+                    line-height: 1;
+                    &:not(:last-child){
+                        padding-right: 8px;
+                    }
                     a{
-                        color: $colorPrimary;
+                        color: $colorWhite;
+                        i {
+                            font-size: 20px;
+                        }
                     }
                 }
-                a{
-                    color: $colorWhite;
-                    padding-left: 30px;
-                    padding-right: 30px;
-                    transition: $transition;
+            }
+        }
+    }
+    .middle-header{
+        padding: 20px 0;
+        .navbar-brand{
+            img{
+                width: 14rem;
+            }
+        }
+    }
+    .main-header{
+        nav{
+            background: $colorPrimary;
+            padding: 0;
+            .navbar-brand{
+                img{
+                    width: 14rem;
+                }
+                &.default {
+                    display: none;
+                    transition: transform 0.5s;
+                }
+            }
+            .navbar-collapse{
+                transition: transform 0.5s;
+                .navbar-nav{
+                    li.nav-item{
+                    &:not(:last-child){
+                        margin-right: 10px;
+                    }
+                        a{
+                            font-size: 16px;
+                            color: $colorWhite;
+                            padding: 12px 15px;
+                            &.active{
+                                background: $colorSecondary;
+                                color: rgba($colorWhite, $alpha: 1);
+                            }
+                        }
+                        &.admission{
+                            background: $colorPrimary;
+                            @media screen and (min-width:992px) {
+                                margin-left: 15px;
+                            }
+                            border: 2px solid $colorPrimary;
+                            transition: $transition;
+                            border-radius: 10px;
+                            &:hover{
+                                background: transparent;
+                                a{
+                                    color: $colorPrimary;
+                                }
+                            }
+                            a{
+                                color: $colorWhite;
+                                padding-left: 30px;
+                                padding-right: 30px;
+                                transition: $transition;
+                            }
+                        }
+                    }
+                }
+            }
+            &.fixed-top {
+                top: -40px;
+                transform: translateY(40px);
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                transition: transform .5s;
+                background-image: linear-gradient(135deg, rgba(255,255,255,1) 25%, rgba(11,111,178,1) 25%);
+                padding: 10px 0;
+                a.navbar-brand.default {
+                    display: block;
+                    img{
+                        width: 14rem;
+                    }
+                }
+                .navbar-collapse{
+                    justify-content: flex-end!important;
                 }
             }
         }
