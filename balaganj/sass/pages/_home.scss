@@ -4,6 +4,9 @@
 		display: grid;
     	align-items: center;
 		position: relative;
+		@include respond (tab-port-before){
+			padding: 0 30px;
+		}
 		&::before{
 			content: "";
 			position: absolute;
@@ -54,6 +57,13 @@
 	.slide-btn {
     margin-top: 30px;
 	text-align: center;
+	display: flex;
+    justify-content: center;
+    gap: 30px;
+	@include respond (phone-before){
+		flex-direction: column;
+		gap: 10px;
+	}
 }
 }
 .s-future{
