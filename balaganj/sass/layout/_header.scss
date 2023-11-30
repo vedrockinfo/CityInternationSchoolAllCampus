@@ -24,10 +24,56 @@ header{
         }
     }
     .middle-header{
+        @include respond (tab-land-before){
+            display: none;
+        }
         padding: 20px 0;
         .navbar-brand{
             img{
                 width: 14rem;
+            }
+        }
+        .header-contact {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%;
+            }
+        .header-contact-list {
+            display: flex;
+            align-items: unset;
+            gap: 15px;
+            &:hover{
+                .contact-icons{
+                    border-radius: 50% 3px 50% 50%;
+                }
+            }
+            .contact-icons {
+                font-size: 25px;
+                text-align: center;
+                background: $colorPrimary;
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+                border-radius: 3px 50% 50%;
+                transition: $transition;
+                i{
+                    color: $colorWhite;
+                }
+            }
+            .header-contact-details {
+                h4 {
+                    font-weight: 700;
+                    margin: 0;
+                    color: $colorHeading;
+                }
+                p{
+                    margin-bottom: 0;
+                    color: $colorText;
+                    a{
+                        color: $colorText;
+                    }
+                }
             }
         }
     }
@@ -35,18 +81,49 @@ header{
         nav{
             background: $colorPrimary;
             padding: 0;
+            @include respond (tab-land-before){
+                background: $colorWhite;
+                padding: 10px  0;
+                button.navbar-toggler {
+                    padding: 0;
+                    border: none;
+                    font-size: 24px;
+                }
+            }
             .navbar-brand{
                 img{
                     width: 14rem;
                 }
                 &.default {
-                    display: none;
+                    @include respond (tab-land-after){
+                        display: none;
+                    }
                     transition: transform 0.5s;
                 }
             }
             .navbar-collapse{
                 transition: transform 0.5s;
                 .navbar-nav{
+                    @media screen and (min-width: 992px) {
+                        .dropdown:hover .dropdown-menu {
+                            display: block;
+                            margin-top: 0;
+                        }
+                        .dropdown .dropdown-menu {
+                            display: none;
+                        }
+                        .dropdown:hover .dropdown-toggle::after {
+                            border-top: 0;
+                            border-bottom: 0.3em solid;
+                        }
+                    }
+
+                        @media screen and (max-width: 991px) {
+                        .dropdown-toggle.show::after {
+                            border-top: 0;
+                            border-bottom: 0.3em solid;
+                        }
+                    }
                     li.nav-item{
                     &:not(:last-child){
                         margin-right: 10px;
@@ -91,6 +168,14 @@ header{
                 transition: transform .5s;
                 background-image: linear-gradient(135deg, rgba(255,255,255,1) 25%, rgba(11,111,178,1) 25%);
                 padding: 10px 0;
+                @include respond (tab-land-before){
+                    background-image: linear-gradient(135deg, white 40%, #0b6fb2 40%);
+                    button.navbar-toggler {
+                        span{
+                            filter: brightness(0) invert(4);
+                        }
+                    }
+                }
                 a.navbar-brand.default {
                     display: block;
                     img{
