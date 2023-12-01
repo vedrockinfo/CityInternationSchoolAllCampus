@@ -101,6 +101,13 @@ body {
     color: $colorPrimary;
     text-transform: uppercase;
 }
+.heading-fifth{
+    font-size: 14px;
+    font-weight: normal;
+    font-style: oblique;
+    letter-spacing: 0.5px;
+    color: $footerBG;
+}
 .content-para p, .content-para li {
   font-size: 16px;
   line-height: 30px;

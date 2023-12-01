@@ -1,0 +1,220 @@
+.successful-events{
+    padding: 7rem 0;
+    @include respond(tab-land-before){
+        padding: 5rem 0;
+        }
+        @include respond(tab-port-before){
+        padding: 3rem 0;
+        }
+    background-image: url("https://ft.bazardeal.com.bd/nk/nekaton-preview-4/nekaton/assets/img/bg/counter-bg-2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    &::before{
+        content: "";
+        background: rgba(0, 0, 0, 0.8);
+        height: 100%;
+        left: 0;
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .container{
+        position: relative;
+    }
+    .single-counter-item{
+        position: relative;
+        background: rgba($colorWhite, 0.18);
+        padding: 25px 0;
+        border-radius: 50% 3px 3px 3px;
+        transition: $transition;
+        text-align: center;
+        min-height: 220px;
+        display: grid;
+        place-content: center;
+        .timer{
+            color: $colorWhite;
+            font-size: 55px;
+            margin: 0;
+            font-weight: 700;
+            transition: $transition;
+        }
+        i{
+            color: $colorWhite;
+            font-size: 36px;
+        }
+        p{
+            font-weight: 500;
+            color: $colorWhite;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            background: rgba($colorWhite, 1);
+            height: 2px;
+            width: 50%;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out 0s;
+        }
+        &:hover{
+            border-radius: 3px 50% 3px 3px;
+            &::before{
+                width: 100%;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+.becomefamily{
+    background: $colorPrimary;
+    .our-family{
+        padding-top:  7rem;
+        padding-bottom:  7rem;
+        @include respond(tab-land-before){
+        padding-top: 5rem;
+        padding-bottom:  5rem;
+        }
+        @include respond(tab-port-before){
+        padding-top: 3rem;
+        padding-bottom:  3rem;
+        }
+        color: rgba($colorWhite, 1);
+        text-align: center;
+        @include respond (small-desktop-after){
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+    }
+    .col-md-4 {
+        position: relative;
+        img{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+.cis-serving{
+    .nav{
+        width: 275px;
+        .nav-item{
+            &:not(:last-child){
+                margin-bottom: 30px;
+            }
+            button{
+                position: relative;
+                color: $colorText;
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+                display: table;
+                padding: 15px 20px;
+                border: none;
+                border-radius: 0;
+                transition: $transition;
+                width: 100%;
+                &.active{
+                    background: $colorPrimary;
+                    color: rgba($colorWhite, 1)!important;
+                    &::after{
+                        transform: translate(0, -50%);
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                &::after{
+                    content: "\f138";
+                    font-family: "Font Awesome 6 Free";
+                    position: absolute;
+                    right: -10px;
+                    color: $colorPrimary;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+    .tab-content{
+        width: calc(100% - 275px);
+        padding: 2rem 3rem 2rem 8rem;
+    }
+}
+.testimonial-section{
+    .testimonial-list{
+        .testimonial-items{
+            text-align: center;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background: rgba($colorWhite, 1);
+            padding: 30px 40px;
+            border-radius: 10px;
+            width: calc(100% - 35px);
+            .clients-pic{
+                display: block;
+                margin-bottom: 3rem;
+                img{
+                    width: 10rem;
+                    height: 10rem;
+                    border-radius: 50%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            .client-name{
+
+            }
+            .client-dest{
+                
+            }
+            .rating{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 30px;
+                i{
+                    color: #f7c245;
+                }
+            }
+        }
+    }
+    button.owl-prev, button.owl-next {
+    position: absolute;
+    top: calc(50% - 40px);
+    transform: translateY(-50%);
+}
+
+	button.owl-prev{
+		left:0;
+	}
+
+	button.owl-next{
+		right:0;
+	}
+
+	.owl-nav button{
+		padding:20px;
+	}
+
+	.owl-nav i {
+		color:$colorWhite;
+		background:$colorPrimary;
+		width: 30px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 16px;
+		line-height: 0;
+		transition: $transition;
+	}
+    .owl-stage{
+  margin-bottom: 60px;
+}
+}

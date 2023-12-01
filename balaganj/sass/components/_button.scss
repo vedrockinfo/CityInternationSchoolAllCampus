@@ -114,6 +114,49 @@ a.btn.btn-one {
 
     }
 }
+a.btn.trn-btn {
+    font-size: 13px;
+    font-weight: 600;
+    color: $colorWhite;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    background: transparent;
+    border: 2px solid $colorWhite;
+    border-radius: 30px;
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    transform: perspective(1px) translateZ(0);
+    transition-property: color;
+    visibility: visible;
+    animation-name: fadeInUp;
+    transition: all 0.5s;
+    margin-top: 3rem;
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 30px;
+        transform: scale(0);
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+        background-color: $colorHeading;
+    }
+    &:hover{
+        color: $colorWhite;
+    border-color: $colorHeading;
+        &::before{
+            transform: scale(1);
+        }
+    }
+}
+
 .btn-wrapper{
     margin-top: 3rem;
 }

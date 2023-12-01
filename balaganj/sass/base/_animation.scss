@@ -8,3 +8,20 @@
     opacity: 0;
   }
 }
+
+@keyframes animloader108 {
+  0% {  box-shadow: 0 0 0 -2px , 0 0 0 -2px , 0 0 0 -5px , 0 0 0 -5px }
+  20% {  box-shadow: 40px -1px 0 -2px , 0 0 0 -2px , 40px -1px 0 -5px , 0 0 0 -5px}
+  40% {  box-shadow: 40px -1px 0 -2px , -40px -1px 0 -2px ,  40px -1px 0 -5px ,-40px -1px 0 -5px}
+  60% {  box-shadow: 40px -1px 0 -2px , -40px -1px 0 -2px ,   23px -29px 0 -5px ,-40px -1px 0 -5px}
+  80% , 95% {  box-shadow: 40px -1px 0 -2px , -40px -1px 0 -2px ,   23px -29px 0 -5px , -23px -29px 0 -5px}
+  100% {  box-shadow: 40px -1px 0 -2px rgba($colorPrimary, 0), -40px -1px 0 -2px rgba($colorPrimary, 0),   23px -29px 0 -5px rgba($colorPrimary, 0), -23px -29px 0 -5px rgba($colorPrimary, 0)}
+}
+
+@keyframes animloader108s {
+  0% {  box-shadow: 0 0 0 -2px , 0 0 0 -2px , 0 0 0 -5px , 0 0 0 -5px }
+  20% {  box-shadow: 40px 2px 0 -2px  , 0 0 0 -2px , 40px 2px 0 -5px , 0 0 0 -5px }
+  40% {  box-shadow: 40px 2px 0 -2px  , -40px 2px 0 -2px , 40px 2px 0 -5px , -40px 2px 0 -5px }
+  60% {  box-shadow: 40px 2px 0 -2px  , -40px 2px 0 -2px , 23px -23px 0 -5px , -40px 2px 0 -5px }
+  80%, 95% {  box-shadow: 40px 2px 0 -2px  , -40px 2px 0 -2px , 23px -23px 0 -5px , -23px -23px 0 -5px }
+}

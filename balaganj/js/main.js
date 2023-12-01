@@ -69,3 +69,22 @@ $('.inspires-life').owlCarousel({
     }
   }
 })
+
+$('.testimonial-carousel').owlCarousel({
+  loop: true,
+  margin: 40,
+  nav: true,
+  navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+  dots: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    1000: {
+      items: 2
+    }
+  }
+})

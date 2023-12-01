@@ -158,6 +158,20 @@ header{
                                 transition: $transition;
                             }
                         }
+                        .dropdown-menu {
+                            li{
+                                &:not(:last-child){
+                                    border-bottom: 1px solid $colorPrimary;
+                                }
+                                a.dropdown-item{
+                                    color: $colorPrimary;
+                                    &:focus, &:active, &:hover{
+                                        background: $colorPrimary;
+                                        color: rgba($colorWhite, $alpha: 1);
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
