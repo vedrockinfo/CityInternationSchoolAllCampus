@@ -803,8 +803,7 @@ header .main-header nav {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background: white;
   padding: 30px 40px;
-  border-radius: 10px;
-  width: calc(100% - 35px); }
+  border-radius: 10px; }
   .testimonial-section .testimonial-list .testimonial-items .clients-pic {
     display: block;
     margin-bottom: 3rem; }
