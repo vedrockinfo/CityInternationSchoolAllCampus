@@ -57,10 +57,10 @@
       }
       .loader-spinner {
     width: 48px;
-    height: 24px;
+    height: 35px;
     color: $colorPrimary;
     background: $colorPrimary;
-    border-radius: 50% 50% 0 0;
+    border-radius: 50% 50% 20% 20%;
     position: relative;
     margin-top: 36px;
     animation: animloader108 4s linear infinite ;
