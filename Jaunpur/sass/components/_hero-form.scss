@@ -1,122 +1,95 @@
-
-.form-body{
-    display: grid;
-    justify-content: flex-end;
-    .form-holder {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      .form-content {
-    position: relative;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    .form-items {
-    background: rgba($colorBlack, 0.8);
-    backdrop-filter: blur(7px);
-    padding: 25px;
-    display: inline-block;
-    width: 100%;
-    min-width: 420px;
-    @include respond(phone-before){
-      min-width: 80%;
+.admission-form{
+    background: $colorWhite;
+    padding: 2.5rem 3rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 1rem;
+    @media screen and (max-width:992px) {
+            margin-bottom: 3rem;
+        }
+    @media screen and (min-width:992px) {
+        position: sticky;
+    top: 12rem;
     }
-    border-radius: 10px;
-    text-align: left;
-    transition: all 0.4s ease;
-}
-h3 {
-    color: $colorWhite;
-    text-align: left;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-h3.form-title {
-    margin-bottom: 30px;
-}
-p {
-    color: $colorWhite;
-    text-align: left;
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 20px;
-    margin-bottom: 30px;
-}
-label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
-    color: $colorWhite;
-    font-size: 1.6rem;
-}
-input[type=text], input[type=password], input[type=email], select{
+   form{
+    .form-group{
+        position: relative;
     width: 100%;
-    padding: 9px 20px;
-    text-align: left;
-    border: 0;
-    outline: 0;
-    border-radius: 6px;
-    background-color: $colorWhite;
-    font-size: 15px;
-    font-weight: 300;
-    color: #8D8D8D;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    margin-top: 16px;
-}
-textarea {
-    position: static !important;
-    width: 100%;
-    padding: 8px 20px;
-    border-radius: 6px;
-    text-align: left;
-    background-color: $colorWhite;
-    border: 0;
-    font-size: 15px;
-    font-weight: 300;
-    color: #8D8D8D;
-    outline: none;
-    resize: none;
-    height: 120px;
-    -webkit-transition: none;
-    transition: none;
-    margin-bottom: 14px;
-    
-    margin-top: 16px;
-    &:hover, &:focus{
-    border: 0;
-    background-color: #ebeff8;
-    color: #8D8D8D;
-}
-}
-button{
-    background: transparent;
-}
-}
-.mv-up{
-    margin-top: -9px !important;
-    margin-bottom: 8px !important;
-}
-
-.invalid-feedback{
-    color: #ff606e;
-}
-
-.valid-feedback{
-   color: #2acc80;
-}
-}
-.gender{
-    margin: 2rem 0 1rem 0;
-    .btn{
-        border: 1px solid $colorWhite;
-        transition: $transition;
-        &:hover{
-            background: $colorWhite;
-            color: $colorBlack;
+    margin-top: 35px;
+    }
+    .form-control{
+        position: relative;
+        width: 100%;
+        color: #c2c2c2;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $colorBlack;
+        outline: none;
+        box-shadow: none;
+        font-weight: normal;
+        letter-spacing: 0.05rem;
+        transition: 0.5s;
+        &::placeholder{
+            color: $colorText;
+        }
+        &:hover, &:active, &:focus{
+            border-bottom: 1px solid $colorPrimary;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         }
     }
+    select{
+        position: relative;
+        &::after{
+            content: "^";
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 20px;
+        }
+    }
+   }
+   .text-center{
+    strong{
+        color: $colorPrimary;
+        cursor: pointer;
+    }
+   }
+   .verify-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    .help{
+        cursor: pointer;
+        color: $colorPrimary;
+    }
+    .backnum{
+        cursor: pointer;
+        color: $colorPrimary;
+    }
+}
+.resend{
+    text-align: right;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    display: block;
+    color: $colorPrimary;
+    cursor: pointer;
+    transition: $transition;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+span.otp-sent {
+    font-size: 1.2rem;
+}
+.otp-resent {
+    position: fixed;
+    top: 10rem;
+    right: 2rem;
+    background: $colorPrimary;
+    color: $colorWhite;
+    padding: 4px 20px;
+    font-size: 1.4rem;
+    z-index: 99;
 }
 }

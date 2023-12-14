@@ -1,0 +1,120 @@
+.form-control {
+	height: 36px;
+	background: $colorWhite;
+	color: rgba(0,0,0,.8);
+	font-size: 14px;
+	border-radius: 2px;
+	box-shadow: none !important;
+	border: 1px solid rgba(0,0,0,.1);
+	&::placeholder {
+	  color: rgba(0,0,0,.3) !important;
+	}
+	&:focus, &:active {
+		border-color: $colorPrimary !important;
+        background: $colorWhite;
+	}
+}
+textarea.form-control {
+	height: inherit!important;
+}
+.wrapper{
+	width: 100%;
+}
+.contact-wrap{
+	background: $colorWhite;
+}
+
+.info-wrap{
+	@media screen and (min-width:768px){
+		background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	}
+}
+
+.dbox{
+	width: 100%;
+	margin-bottom: 25px;
+	@media screen and (min-width:768px){
+		margin-bottom: 25px !important;
+		padding: 0 20px;
+	}
+	p{
+		margin-bottom: 0;
+		span{
+			font-weight: 500;
+			color: $colorBlack;
+		}
+		a{
+			color: $colorPrimary;
+		}
+	}
+	.icon{
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background: $colorPrimary;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		span{
+			font-size: 20px;
+			color: $colorWhite;
+		}
+	}
+	.text{
+		width: 100%;
+	}
+}
+
+.btn{
+    margin-top: 2rem;
+}
+.contactForm{
+    .form-group {
+    margin-top: 3rem;
+}
+	.label{
+		color: $colorBlack;
+		text-transform: capitalize;
+		font-size: 12px;
+		font-weight: 500;
+        margin-bottom: 1rem;
+	}
+	.form-control{
+		border: 1px solid rgba(0,0,0,.1);
+		padding: 10px;
+        border-radius: 5px;
+	}
+}
+// Forms style
+#contactForm {
+	.error {
+		color: red;
+		font-size: 12px;
+	}
+	.form-control {
+		font-size: 14px;
+	}
+}
+#message {
+	resize: vertical;
+}
+#form-message-warning, #form-message-success {
+	display: none;
+}
+#form-message-warning {
+	color: red;
+}
+#form-message-success {
+	color: violet;
+	font-size: 18px;
+	font-weight: 500;
+}
+.submitting {
+	float: left;
+	width: 100%;
+	padding: 10px 0;
+	display: none;
+	font-size: 16px;
+	font-weight: bold;
+}

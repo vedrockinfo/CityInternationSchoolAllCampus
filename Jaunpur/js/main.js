@@ -6,71 +6,6 @@ jQuery(window).scroll(function () {
   }
 });
 
-// Navbar 
-
-(function ($) {
-  $(function () {
-
-    $('#navbar-toggle').click(function () {
-      $('nav ul').slideToggle();
-    });
-
-    $('#navbar-toggle').on('click', function () {
-      this.classList.toggle('active');
-    });
-
-    $('nav ul li a:not(:only-child)').click(function (e) {
-      $(this).siblings('.navbar-dropdown').slideToggle("slow");
-
-      $('.navbar-dropdown').not($(this).siblings()).hide("slow");
-      e.stopPropagation();
-    });
-
-    $('html').click(function () {
-      $('.navbar-dropdown').hide();
-    });
-  });
-})(jQuery);
-
-
-$('.owl-carousel').owlCarousel({
-  loop: true,
-  margin: 30,
-  nav: false,
-  autoplay: 3000,
-  dots: true,
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 2
-    },
-    1000: {
-      items: 3
-    }
-  }
-})
-
-// Including Header Footer
-
-// function loadContent(file, elementId) {
-//   var xhr = new XMLHttpRequest();
-//   xhr.onreadystatechange = function () {
-//     if (xhr.readyState == 4 && xhr.status == 200) {
-//       document.getElementById(elementId).innerHTML = xhr.responseText;
-//     }
-//   };
-//   xhr.open("GET", file, true);
-//   xhr.send();
-// }
-
-// loadContent("include/header.html", "header");
-// loadContent("include/footer.html", "footer");
-
-// loadContent("../include/campus-header.html", "campus-header");
-// loadContent("../include/campus-footer.html", "campus-footer");
-
 
 jQuery(function () {
   jQuery("#header").load("include/header.html");
@@ -81,4 +16,46 @@ jQuery(function () {
 
 window.addEventListener('load', function () {
   document.getElementById('loader').style.display = 'none';
+});
+
+
+jQuery(document).ready(function () {
+  jQuery(".signup-form").hide();
+
+  jQuery("#login").click(function () {
+    jQuery(".login-form").hide();
+    jQuery(".signup-form").show();
+  });
+
+  jQuery("#signup").click(function () {
+    jQuery(".signup-form").hide();
+    jQuery(".login-form").show();
+  });
+});
+
+jQuery(document).ready(function () {
+  jQuery("#verify-number").hide();
+  jQuery("#verify-otp").hide();
+  jQuery("#otp-resent").hide();
+
+  jQuery("#send-otp").click(function () {
+    jQuery("#mobile-number").hide();
+    jQuery("#verify-number").show();
+    jQuery("#send-otp").hide();
+    jQuery("#verify-otp").show();
+  });
+
+  jQuery("#backtonumber").click(function () {
+    jQuery("#verify-number").hide();
+    jQuery("#mobile-number").show();
+    jQuery("#verify-otp").hide();
+    jQuery("#send-otp").show();
+  });
+
+  jQuery('#resend-otp').click(function () {
+    jQuery("#otp-resent").fadeIn("slow");
+    setTimeout(function () {
+      jQuery("#otp-resent").fadeOut("slow");
+    }, 5000);
+  });
 });

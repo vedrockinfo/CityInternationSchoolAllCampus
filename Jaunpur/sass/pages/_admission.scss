@@ -1,0 +1,47 @@
+.admission{
+    .row{
+        @media screen and (max-width:992px) {
+            flex-direction: column-reverse;
+        }
+    }
+    hr{
+        margin: 2.5rem 0 4.5rem;
+        @include respond(tab-land-before){
+      margin: 2rem 0 3rem;
+    }
+    @include respond(tab-port-before){
+      margin: 1rem 0 2rem;
+    }
+    }
+    ul.primary-list{
+         li:not(:last-child){
+            margin-bottom: 20px;
+         }
+        &.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 50px;
+    margin-top: 20px;
+    strong{
+        color: $colorPrimary;
+    }
+}
+    }
+    .heading-fourth{
+        color: $colorHeading;
+        margin-bottom: 20px;
+    }
+}
+.director-message{
+    .director-pic{
+        @media screen and (max-width:992px) {
+            margin-bottom: 3rem;
+        }
+    }
+    .content-para {
+    @media screen and (min-width:992px) {
+        padding-left: 2rem;
+    }
+}
+}
