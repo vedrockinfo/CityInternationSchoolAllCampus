@@ -1,0 +1,53 @@
+.mahotsav-section{
+    .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    @include respond (tab-land-before){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond (tab-port-before){
+        grid-template-columns: repeat(1, 1fr);
+    }
+    gap: 2rem;
+    grid-auto-rows: 25rem;
+    .gallery-grid-items{
+        overflow: hidden;
+        .bg-image{
+            height: 100%;
+        }
+        img{
+    width:100%;
+    height:100%!important;
+    object-fit: cover;
+    object-position: top;
+        }
+    }
+    .mask{
+        background-color: rgba(251, 251, 251, 0.2);
+    }
+}
+.closed {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(100%, 0);
+    cursor: pointer;
+    img {
+    width: 5rem;
+    filter: brightness(0) sepia(2) invert(1);
+}
+}
+.azadi-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 15px;
+    background: $colorPrimary;
+    h4 {
+    margin: 0;
+    font-size: 13px;
+    color: $colorWhite;
+    font-weight: 600;
+}
+}
+}

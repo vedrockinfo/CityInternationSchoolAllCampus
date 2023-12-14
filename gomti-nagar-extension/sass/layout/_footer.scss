@@ -44,8 +44,11 @@ ul.contact-us, ul.quick-links{
     padding-bottom: 15px;
 }
     & + .copyright{
-        background: $footerBG;
+        background: $copyrightBG;
         padding: 10px;
+        @media screen and (max-width:970px) {
+            padding: 10px 10px 50px;
+        }
         p, a{
         color: $footerBG;
         margin: 0;

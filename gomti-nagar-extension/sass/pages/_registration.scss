@@ -1,0 +1,173 @@
+.registration{
+    padding: 7rem 0;
+    @include respond(tab-land-before){
+      padding: 5rem 0;
+    }
+    @include respond(tab-port-before){
+      padding: 3rem 0;
+    }
+    position: relative;
+    background-image: url(https://blog.clickmeeting.com/uploads//2016/11/2016.11.01-Using-The-Webinar-Registration-Form-To-Gain-Marketing-Intelligence.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &::before{
+        content: "";
+        background: $colorPrimary;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0.7;
+        height: 100%;
+
+    }
+    .container{
+        position: relative;
+        .registration-grid{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            @include respond (tab-port-after){
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                align-items: center;
+                .left-side{
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    height: 100%;
+                    width: 100%;
+                    background: #fe5d37;
+                    padding: 5rem;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 2rem 0rem 0rem 2rem;
+                    position: relative;
+                    &::before{
+                        content: "";
+                        background-image: url("../images/career-01.png");
+                        background-position: bottom;
+                        background-size: contain;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 100%;
+                        height: 100%;
+                        z-index: 0;
+                        mix-blend-mode: soft-light;
+    opacity: 0.7;
+                    }
+                    .cis-info {
+                    position: relative;
+                }
+                }
+                .right-side{
+                    grid-column-start: 3;
+                    grid-column-end: 7;
+                    background: $colorWhite;
+                    padding: 5rem;
+                    border-radius: 0 2rem 2rem 0;
+                }
+            }
+        }
+    }
+    .registrer-social {
+    text-align: center;
+    margin-top: 3rem;
+    strong{
+        font-size: 2.4rem;
+        font-weight: 300;
+        position: relative;
+        background: $colorWhite;
+        z-index: 0;
+        padding: 6px;
+        &::before, &::after{
+            content: "";
+            background: $colorBlack;
+            width: 12rem;
+            top: 57%;
+            height: 1px;
+            transform: translateY(-50%);
+            position: absolute;
+            z-index: -1;
+        }
+        &::before{
+            left: 0;
+        }
+        &::after{
+            right: 0;
+        }
+    }
+    ul {
+    margin: 2rem 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    li{
+        &:nth-child(1){
+            i{
+                color: #e96651;
+            }
+        }
+        &:nth-child(2){
+            i{
+                color: #7acdee;
+            }
+        }
+        &:nth-child(3){
+            i{
+                color: #557dbc;
+            }
+        }
+        &:nth-child(4){
+            i{
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                    -webkit-background-clip: text;
+                    color: transparent;
+            }
+        }
+        a{
+            display: block;
+            i {
+    font-size: 3rem;
+}
+        }
+    }
+}
+}
+.cis-info{
+    .logo {
+    background: #fff;
+    padding: 10px 30px;
+    border-radius: 0 140px 0px 0px;
+}
+}
+.cis-info-content{
+    margin-top: 4rem;
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    h6{
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 25px;
+    }
+    li{
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 25px;
+        color: $colorWhite;
+        font-family: "Montserrat", sans-serif !important;
+        &::before{
+            filter: brightness(0) sepia(1) invert(2);
+        }
+    }
+}
+
+}
+.register-footer{
+    footer{
+        margin-top: 0;
+    }
+}

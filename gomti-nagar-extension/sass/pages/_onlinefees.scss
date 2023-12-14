@@ -1,0 +1,27 @@
+.online-key-features{
+    background: $colorWhite;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 15px 15px 15px 0px;
+    position: sticky;
+    top: 2rem;
+    ul{
+        li{
+            font-size: initial;
+            &:not(:last-child){
+                padding-bottom: 0.7rem;
+            }
+        }
+    }
+}
+.notes{
+    padding: 1rem 2.5rem 2rem;
+    border: 1px solid $colorBlack;
+    h5{
+        text-decoration: underline;
+        text-underline-position: below;
+    }
+    p{
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+}

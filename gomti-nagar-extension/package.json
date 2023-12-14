@@ -1,13 +1,13 @@
 {
-  "name": "gomti-nagar-extension",
+  "name": "manascity",
   "version": "1.0.0",
-  "description": "CIS GomtiNagar EXT",
+  "description": "CIS Manascity",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "keywords": [
-    "GomtiNagar",
+    "Manascity",
     "Campus"
   ],
   "author": "Vedant",

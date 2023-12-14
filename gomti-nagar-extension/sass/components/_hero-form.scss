@@ -1,27 +1,136 @@
+.hero-section{
+    .form-body{
+        display: grid;
+        justify-content: flex-end;
+        padding: 2rem;
+        .form-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .form-content {
+        position: relative;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        .form-items {
+        background: rgba($colorPrimary, 1);
+        backdrop-filter: blur(7px);
+        padding: 25px;
+        display: inline-block;
+        width: 100%;
+        @include respond(phone-before){
+        min-width: 80%;
+        }
+        border-radius: 10px;
+        text-align: left;
+        transition: all 0.4s ease;
+    }
+    h3 {
+        color: $colorWhite;
+        text-align: left;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    h3.form-title {
+        margin-bottom: 30px;
+    }
+    p {
+        color: $colorWhite;
+        text-align: left;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 20px;
+        margin-bottom: 30px;
+    }
+    label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+        color: $colorWhite;
+        font-size: 1.6rem;
+    }
+    input[type=text], input[type=password], input[type=email], select{
+        width: 100%;
+        padding: 9px 20px;
+        text-align: left;
+        border: 0;
+        outline: 0;
+        border-radius: 6px;
+        background-color: $colorWhite;
+        font-size: 15px;
+        font-weight: 300;
+        color: #8D8D8D;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        margin-top: 16px;
+    }
+    textarea {
+        position: static !important;
+        width: 100%;
+        padding: 8px 20px;
+        border-radius: 6px;
+        text-align: left;
+        background-color: $colorWhite;
+        border: 0;
+        font-size: 15px;
+        font-weight: 300;
+        color: #8D8D8D;
+        outline: none;
+        resize: none;
+        height: 120px;
+        -webkit-transition: none;
+        transition: none;
+        margin-bottom: 14px;
+        
+        margin-top: 16px;
+        &:hover, &:focus{
+        border: 0;
+        background-color: #ebeff8;
+        color: #8D8D8D;
+    }
+    }
+    button{
+        background: transparent;
+    }
+    }
+    .mv-up{
+        margin-top: -9px !important;
+        margin-bottom: 8px !important;
+    }
 
-.form-body{
-    display: grid;
-    justify-content: flex-end;
-    .form-holder {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      .form-content {
-    position: relative;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    .form-items {
-    background: rgba($colorBlack, 0.8);
-    backdrop-filter: blur(7px);
+    .invalid-feedback{
+        color: #ff606e;
+    }
+
+    .valid-feedback{
+    color: #2acc80;
+    }
+    }
+    .gender{
+        margin: 2rem 0 1rem 0;
+        .btn{
+            border: 1px solid $colorWhite;
+            transition: $transition;
+            &:hover{
+                background: $colorWhite;
+                color: $colorBlack;
+            }
+        }
+    }
+    }
+}
+.contact-form-area{
+    @include respond (tab-port-before){
+        margin-top: 3rem;
+    }
+        .form-items {
+            border: 1px solid $colorBlack;
+            border-radius: 10px;
     padding: 25px;
     display: inline-block;
     width: 100%;
-    min-width: 420px;
     @include respond(phone-before){
       min-width: 80%;
     }
@@ -30,11 +139,14 @@
     transition: all 0.4s ease;
 }
 h3 {
-    color: $colorWhite;
+    color: $colorPrimary;
     text-align: left;
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 5px;
+    @include respond (phone-before){
+        font-size: 18px;
+    }
 }
 h3.form-title {
     margin-bottom: 30px;
@@ -51,32 +163,45 @@ label, .was-validated .form-check-input:invalid~.form-check-label, .was-validate
     color: $colorWhite;
     font-size: 1.6rem;
 }
-input[type=text], input[type=password], input[type=email], select{
+input[type=text], input[type=password], input[type=email], input[type=date], select{
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1rem;
+    border-radius: 2px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $colorBlack;
+    display: block;
     width: 100%;
-    padding: 9px 20px;
-    text-align: left;
-    border: 0;
-    outline: 0;
-    border-radius: 6px;
-    background-color: $colorWhite;
-    font-size: 15px;
-    font-weight: 300;
-    color: #8D8D8D;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     margin-top: 16px;
+    color: $colorBlack;
+    @include respond (phone-before){
+        padding: 0.5rem 1rem;
+    }
+    &::placeholder{
+        color: $colorBlack;
+    }
+    &:focus{
+        box-shadow: none!important;
+        border-bottom: 1px solid $colorPrimary;
+        &::placeholder{
+            color: $colorPrimary;
+        }
+    }
 }
 textarea {
     position: static !important;
     width: 100%;
-    padding: 8px 20px;
+    padding: 1rem;
     border-radius: 6px;
     text-align: left;
-    background-color: $colorWhite;
-    border: 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $colorBlack;
     font-size: 15px;
     font-weight: 300;
-    color: #8D8D8D;
+    color: $colorBlack;
     outline: none;
     resize: none;
     height: 120px;
@@ -85,38 +210,218 @@ textarea {
     margin-bottom: 14px;
     
     margin-top: 16px;
-    &:hover, &:focus{
-    border: 0;
-    background-color: #ebeff8;
-    color: #8D8D8D;
-}
-}
-button{
-    background: transparent;
-}
-}
-.mv-up{
-    margin-top: -9px !important;
-    margin-bottom: 8px !important;
-}
-
-.invalid-feedback{
-    color: #ff606e;
-}
-
-.valid-feedback{
-   color: #2acc80;
-}
-}
-.gender{
-    margin: 2rem 0 1rem 0;
-    .btn{
-        border: 1px solid $colorWhite;
-        transition: $transition;
-        &:hover{
-            background: $colorWhite;
-            color: $colorBlack;
+    &:focus{
+        border-bottom: 1px solid $colorPrimary;
+        &::placeholder{
+            color: $colorPrimary;
         }
     }
+    &:hover, &:focus{
+    background-color: transparent;
+    color: $colorBlack;
+}
+}
+}
+.online-fees{
+    @include respond (tab-port-before){
+        margin-top: 3rem;
+    }
+        .form-items {
+            border: 1px solid $colorBlack;
+            border-radius: 10px;
+    padding: 25px;
+    display: inline-block;
+    width: 100%;
+    @include respond(phone-before){
+      min-width: 80%;
+    }
+    border-radius: 10px;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+h3 {
+    color: $colorPrimary;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    @include respond (phone-before){
+        font-size: 18px;
+    }
+}
+h3.form-title {
+    margin-bottom: 30px;
+}
+p {
+    color: $colorWhite;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+    color: $colorWhite;
+    font-size: 1.6rem;
+}
+input[type=text], input[type=password], input[type=email], input[type=date], select{
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1rem;
+    border-radius: 2px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $colorBlack;
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    color: $colorBlack;
+    @include respond (phone-before){
+        padding: 0.5rem 1rem;
+    }
+    &::placeholder{
+        color: $colorBlack;
+    }
+    &:focus{
+        box-shadow: none!important;
+        border-bottom: 1px solid $colorPrimary;
+        &::placeholder{
+            color: $colorPrimary;
+        }
+    }
+}
+textarea {
+    position: static !important;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $colorBlack;
+    font-size: 15px;
+    font-weight: normal;
+    color: $colorBlack;
+    outline: none;
+    resize: none;
+    height: 120px;
+    -webkit-transition: none;
+    transition: none;
+    margin-bottom: 14px;
+    
+    margin-top: 16px;
+    &:focus{
+        border-bottom: 1px solid $colorPrimary;
+        &::placeholder{
+            color: $colorPrimary;
+        }
+    }
+    &:hover, &:focus{
+    background-color: transparent;
+    color: $colorBlack
+}
+}
+}
+.registration-form{
+    @include respond (tab-port-before){
+        margin-top: 3rem;
+    }
+        .form-items {
+            border: 1px solid $colorBlack;
+            border-radius: 10px;
+    padding: 25px;
+    @include respond (tab-land-after){
+        display: block;
+    width: calc(100% - 3rem);
+    margin: auto;
+    }
+    @include respond(tab-land-before){
+      min-width: 80%;
+    }
+    border-radius: 10px;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+h3 {
+    color: $colorPrimary;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    @include respond (phone-before){
+        font-size: 18px;
+    }
+}
+h3.form-title {
+    margin-bottom: 30px;
+}
+p {
+    color: $colorWhite;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+    color: $colorWhite;
+    font-size: 1.6rem;
+}
+input[type=text], input[type=password], input[type=email], input[type=date], select{
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1rem;
+    border-radius: 2px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $colorBlack;
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    color: $colorBlack;
+    @include respond (phone-before){
+        padding: 0.5rem 1rem;
+    }
+    &::placeholder{
+        color: $colorBlack;
+    }
+    &:focus{
+        box-shadow: none!important;
+        border-bottom: 1px solid $colorPrimary;
+        &::placeholder{
+            color: $colorPrimary;
+        }
+    }
+}
+textarea {
+    position: static !important;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $colorBlack;
+    font-size: 15px;
+    font-weight: normal;
+    color: $colorBlack;
+    outline: none;
+    resize: none;
+    height: 120px;
+    -webkit-transition: none;
+    transition: none;
+    margin-bottom: 14px;
+    
+    margin-top: 16px;
+    &:focus{
+        border-bottom: 1px solid $colorPrimary;
+        &::placeholder{
+            color: $colorPrimary;
+        }
+    }
+    &:hover, &:focus{
+    background-color: transparent;
+    color: $colorBlack
+}
 }
 }
