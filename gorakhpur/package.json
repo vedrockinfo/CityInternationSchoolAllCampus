@@ -1,13 +1,13 @@
 {
-  "name": "gorakhpur",
+  "name": "barabanki",
   "version": "1.0.0",
-  "description": "CIS Gorakhpur",
+  "description": "CIS Barabanki",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "keywords": [
-    "Gorakhpur",
+    "Barabanki",
     "Campus"
   ],
   "author": "Vedant",
