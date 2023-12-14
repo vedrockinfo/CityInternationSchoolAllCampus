@@ -1,15 +1,18 @@
 {
-  "name": "barabanki",
+  "name": "jaipur",
   "version": "1.0.0",
-  "description": "CIS Barabanki",
+  "description": "CIS Jaipur",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "keywords": [
-    "Barabanki",
+    "Jaipur",
     "Campus"
   ],
   "author": "Vedant",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
 }

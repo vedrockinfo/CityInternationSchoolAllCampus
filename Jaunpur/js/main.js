@@ -6,6 +6,102 @@ jQuery(window).scroll(function () {
   }
 });
 
+// Navbar 
+
+(function ($) {
+  $(function () {
+
+    $('#navbar-toggle').click(function () {
+      $('nav ul').slideToggle();
+    });
+
+    $('#navbar-toggle').on('click', function () {
+      this.classList.toggle('active');
+    });
+
+    $('nav ul li a:not(:only-child)').click(function (e) {
+      $(this).siblings('.navbar-dropdown').slideToggle("slow");
+
+      $('.navbar-dropdown').not($(this).siblings()).hide("slow");
+      e.stopPropagation();
+    });
+
+    $('html').click(function () {
+      $('.navbar-dropdown').hide();
+    });
+  });
+})(jQuery);
+
+
+$('.owl-carousel-1').owlCarousel({
+  loop: true,
+  margin: 30,
+  nav: true,
+  autoplay: 3000,
+  navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 1
+    }
+  }
+})
+
+$(".owl-carousel-2").owlCarousel({
+  loop: true,
+  center: true,
+  items: 3,
+  margin: 0,
+  autoplay: true,
+  smartSpeed: 450,
+  nav: true,
+  dots: false,
+  navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 3
+    }
+  }
+})
+
+$(".owl-carousel-3").owlCarousel({
+  loop: true,
+  items: 3,
+  margin: 30,
+  autoplay: true,
+  nav: true,
+  dots: false,
+  navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 2
+    }
+  }
+})
+
+$(document).ready(function () {
+  $(".owl-carousel-1").owlCarousel();
+  $(".owl-carousel-2").owlCarousel();
+  $(".owl-carousel-3").owlCarousel();
+});
+
 
 jQuery(function () {
   jQuery("#header").load("include/header.html");
@@ -16,46 +112,4 @@ jQuery(function () {
 
 window.addEventListener('load', function () {
   document.getElementById('loader').style.display = 'none';
-});
-
-
-jQuery(document).ready(function () {
-  jQuery(".signup-form").hide();
-
-  jQuery("#login").click(function () {
-    jQuery(".login-form").hide();
-    jQuery(".signup-form").show();
-  });
-
-  jQuery("#signup").click(function () {
-    jQuery(".signup-form").hide();
-    jQuery(".login-form").show();
-  });
-});
-
-jQuery(document).ready(function () {
-  jQuery("#verify-number").hide();
-  jQuery("#verify-otp").hide();
-  jQuery("#otp-resent").hide();
-
-  jQuery("#send-otp").click(function () {
-    jQuery("#mobile-number").hide();
-    jQuery("#verify-number").show();
-    jQuery("#send-otp").hide();
-    jQuery("#verify-otp").show();
-  });
-
-  jQuery("#backtonumber").click(function () {
-    jQuery("#verify-number").hide();
-    jQuery("#mobile-number").show();
-    jQuery("#verify-otp").hide();
-    jQuery("#send-otp").show();
-  });
-
-  jQuery('#resend-otp').click(function () {
-    jQuery("#otp-resent").fadeIn("slow");
-    setTimeout(function () {
-      jQuery("#otp-resent").fadeOut("slow");
-    }, 5000);
-  });
 });

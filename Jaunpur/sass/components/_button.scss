@@ -1,9 +1,7 @@
-.btn-one{
+.btn-default{
     @include GlobalButtonOne();
+    width: 100%;
 }
-.btn-two{
+.btn-default-two{
     @include GlobalButtonTwo();
-}
-.btn-links{
-    margin-top: 30px;
 }

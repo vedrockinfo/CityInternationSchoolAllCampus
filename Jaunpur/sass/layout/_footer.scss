@@ -1,5 +1,5 @@
 footer{
-    background: $footerBG;
+    background: $colorSecondary;
     padding: 7rem 0;
     li, a, i, p{
         color: #c9c9c9!important;
@@ -44,10 +44,10 @@ ul.contact-us, ul.quick-links{
     padding-bottom: 15px;
 }
     & + .copyright{
-        background: $copyrightBG;
+        background: $colorCopyright;
         padding: 10px;
         p, a{
-        color: $footerBG;
+        color: $colorWhite;
         margin: 0;
     }
     }
