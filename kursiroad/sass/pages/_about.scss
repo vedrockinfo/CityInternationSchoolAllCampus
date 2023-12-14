@@ -1,0 +1,108 @@
+.management-section{
+    padding-top: 8rem;
+}
+.management-card{
+    border: 2px solid $colorPrimary;
+    padding: 6rem 2rem 2rem;
+    border-radius: 1rem;
+    background: rgba($colorPrimary, $alpha: 0.1);
+    backdrop-filter: blur(10px);
+    &.bitto{
+        margin-top: 16rem;
+    }
+    h4.heading-fourth {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+    .director-pic{
+        text-align: center;
+        margin-top: -15.5rem;
+        img{
+            border-radius: 50%;
+            width: 20rem;
+            height: 20rem;
+            border: 4px solid $colorWhite;
+            outline: 2px solid $colorPrimary;
+            object-fit: cover;
+        }
+    }
+}
+.ipsative-section{
+    padding: 10rem 0;
+    background-image: url("https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=2673&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: left;
+    position: relative;
+    &::before{
+        content: "";
+        background: rgba($footerBG, $alpha: 1);
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .container{
+        text-align: center;
+        position: relative;
+        img{
+            filter: brightness(0) invert(2) sepia(3);
+        }
+        .content-para{
+            margin-top: 4rem;
+            color: $colorWhite;
+            p{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+.cis-glance {
+    .glance-img{
+    margin-top: 5rem;
+}
+h6{
+    border-left: 5px solid $footerBG;
+    padding-left: 1rem;
+}
+}
+.founder-concept{
+    a{
+        color: $colorPrimary;
+    }
+    .sgandhi{
+        @include respond (tab-port-before){
+            max-width: 25rem;
+            margin: 0 auto 3rem;
+        }
+        img{
+            border-radius: 50%;
+            outline: 3px solid $colorPrimary;
+            border: 3px solid $colorWhite;
+        }
+    }
+    .col-md-3{
+        @media screen and (min-width:767.9px) {
+            text-align: end;
+        }
+    }
+     .found-book-cover {
+    position: relative;
+    display: inline-block;
+    &::before{
+        content: "";
+        background: transparent;
+        border: 5px solid $colorPrimary;
+        position: absolute;
+        top: 2rem;
+        left: -2rem;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+}

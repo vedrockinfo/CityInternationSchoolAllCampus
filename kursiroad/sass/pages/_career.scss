@@ -1,0 +1,174 @@
+.career-one{
+    .container{
+        position: relative;
+    }
+    .careerimg{
+        position: static;
+    }
+    .career-card-content{
+        background: $colorPrimary;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        @media screen and (max-width:992px) {
+            padding: 2rem 4rem;
+        }
+        @include respond (tab-land-after){
+            position: absolute;
+            bottom: -15rem;
+            right: 7.5px;
+        }
+        @media screen and (min-width:992.2px) {
+            width: calc(100% - 45rem);
+        }
+        @media screen and (min-width:1400px) {
+            padding: 7rem 6rem;
+        }
+        @media screen and (min-width:1200px) and (max-width:1399.9px) {
+            padding: 4rem 3rem;
+        }
+        @media screen and (min-width:992.1px) and (max-width:1199.9px) {
+            width: calc(100% - 20rem);
+            padding: 2rem 5rem;
+        }
+        h2{
+            @include respond (tab-land-after){
+                text-align: left;
+            }
+        }
+    }
+}
+.career-two{
+    @include respond (tab-land-after){
+    padding-top: 15rem;
+    }
+    .heading-fourth{
+        margin-bottom: 4rem;
+    }
+    .career-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: 1px solid $footerBG;
+        border-radius: 0;
+        @include respond (tab-land-before){
+            grid-template-columns: repeat(2, 1fr);
+            &__items{
+                &:nth-child(4){
+                    border-bottom: 1px solid $footerBG;
+                }
+                @media screen and (max-width:992.1px) and (min-width:768.5px) {
+            &:nth-child(1), &:nth-child(5), &:nth-child(3){
+                border-right: 1px solid $footerBG;
+            }
+        }
+            }
+        }
+        @include respond (tab-port-before){
+            grid-template-columns: repeat(1, 1fr);
+            &__items{
+                &:nth-child(5){
+                    border-bottom: 1px solid $footerBG;
+                }
+            }
+        }
+        &__items{
+            position: relative;
+            &::before{
+                content: "";
+                background: $colorPrimary;
+                height: 3px;
+                width: 0;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: $transition;
+            }
+            &:hover{
+                &::before{
+                    width: 100%;
+                }
+            }
+            &:nth-child(1), &:nth-child(2), &:nth-child(3){
+                border-bottom: 1px solid $footerBG;
+            }
+            @include respond (tab-land-after){
+                &:nth-child(2), &:nth-child(5){
+                    border-left: 1px solid $footerBG;
+                    border-right: 1px solid $footerBG;
+                }
+            }
+        }
+        &__card{
+            padding: 5rem 3.5rem;
+            .card-icons{
+                text-align: center;
+                img{
+                    mix-blend-mode: multiply;
+                    width: 8rem;
+                    height: 8rem;
+                    object-fit: cover;
+                    object-position: top;
+                }
+            }
+            .card-content{
+                text-align: center;
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+.career-three{
+    padding: 7rem 0;
+    @media screen and (min-width:991.99px){
+        background-image: linear-gradient(90deg, $colorPrimary 54%, transparent 47%);
+        .care-img img{
+            height: 55rem;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+    @media screen and (max-width:991.9px) {
+      padding: 5rem 0;
+      background-image: linear-gradient(180deg, $colorPrimary 54%, $colorPrimary 47%);
+      .care-img img{
+            margin-top: 5rem;
+        }
+    }
+    @include respond(tab-port-before){
+      padding: 3rem 0;
+    }
+    .signature{
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+        color: $colorWhite;
+        img{
+            width: 20rem;
+            margin-bottom: 1rem;
+            filter: brightness(0) sepia(0) invert(1);
+        }
+    }
+    display: block;
+    h2{
+        color: $colorWhite;
+        @include respond (tab-land-after){
+            text-align: left;
+        }
+    }
+    p{
+        color: $colorWhite;
+    }
+}
+.apply-career{
+    .content-para{
+        a{
+            margin-top: 3rem;
+        }
+        @media screen and (min-width:1200px) {
+            padding: 0 20rem;
+        }
+    }
+}
+.career-footer{
+    footer{
+        margin-top: 0;
+    }
+}

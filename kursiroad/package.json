@@ -1,13 +1,13 @@
 {
-  "name": "jaunpur",
+  "name": "manascity",
   "version": "1.0.0",
-  "description": "CIS Jaunpur",
+  "description": "CIS Manascity",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "keywords": [
-    "Jaunpur",
+    "Manascity",
     "Campus"
   ],
   "author": "Vedant",

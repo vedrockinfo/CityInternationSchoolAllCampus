@@ -39,6 +39,44 @@ ul {
 .barabanki-contact footer {
   margin-top: 0; }
 
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; }
+  @media (max-width: 768px) {
+    #loader {
+      width: 50%; } }
+  @media (max-width: 480px) {
+    #loader {
+      width: 100%; } }
+  #loader .loader-spinner {
+    width: 48px;
+    height: 35px;
+    color: #8e4bff;
+    background: #8e4bff;
+    border-radius: 50% 50% 20% 20%;
+    position: relative;
+    margin-top: 36px;
+    animation: animloader108 4s linear infinite; }
+    #loader .loader-spinner::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 28px;
+      height: 31px;
+      border-radius: 50%;
+      background: #8e4bff;
+      top: -34px;
+      animation: animloader108s 4s linear infinite; }
+
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
@@ -192,22 +230,6 @@ h2.primary-heading {
     width: 20px;
     height: 20px;
     transform: translateY(-50%); }
-
-#loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #2F2F2F;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; }
-
-@media (max-width: 576px) {
-  #loader img {
-    width: 80px; } }
 
 .inner-hero-section {
   position: relative;
