@@ -3,13 +3,31 @@
 @import "./abstract/responsive";
 @import "./abstract/varaiables";
 
+@import "./base/animation";
 @import "./base/base";
 @import "./base/typography";
 @import "./base/utilities";
 
 @import "./components/button";
+@import "./components/cards";
+@import "./components/hero-form";
+@import "./components/testimonial";
 
 @import "./layout/footer";
 @import "./layout/header";
+@import "./layout/sidebar";
 
+@import "./pages/admissionProcess";
+@import "./pages/alumni";
+@import "./pages/career.page";
+@import "./pages/cms-education";
+@import "./pages/contactpage";
+@import "./pages/dossier";
+@import "./pages/events";
+@import "./pages/faqs";
+@import "./pages/fees";
+@import "./pages/forget-password";
 @import "./pages/home";
+@import "./pages/news";
+@import "./pages/prospectus-video";
+@import "./pages/syllabus";

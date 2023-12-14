@@ -42,9 +42,13 @@ ul.contact-us, ul.quick-links{
     margin-bottom: 20px;
     // border-bottom: 1px solid rgba($colorWhite, 0.4);
     padding-bottom: 15px;
+    @include respond (tab-port-before){
+        margin-bottom: 10px;
+    margin-top: 3rem;
+    }
 }
     & + .copyright{
-        background: $footerBG;
+        background: $copyrightBG;
         padding: 10px;
         p, a{
         color: $footerBG;

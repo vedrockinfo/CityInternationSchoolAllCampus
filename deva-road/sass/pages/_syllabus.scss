@@ -1,0 +1,121 @@
+.syllabus-section{
+    blockquote {
+    padding: 2rem;
+    background: rgba($colorSecondary, 0.6);
+    border-left: 5px solid $colorPrimary;
+    margin-bottom: 7rem!important;
+    h2{
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2.4rem;
+        color: $colorPrimary;
+    }
+    }
+    .row{
+        align-items: center;
+        @include respond (tab-port-after){
+                .col-md-6:first-child{
+                    padding-right: 4.5rem;
+                }
+            }
+        &.even{
+            flex-direction: row-reverse;
+            margin: 10rem 0;
+            @include respond (tab-land-before){
+                margin: 6rem 0;
+            }
+            @include respond (tab-port-after){
+                .col-md-6:first-child{
+                    padding-left: 3rem;
+                    padding-right: 0;
+                }
+            }
+            .syllabus-ss{
+                position: relative;
+                &:hover{
+                    &::before{
+                        right: 0;
+                    }
+                }
+                &::before{
+                    right: -1.5rem;
+                }
+            }
+        }
+    }
+    .syllabus-top-head{
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 700;
+         @include respond (phone-before){
+                text-align: center;
+                font-size: 2rem;
+        }
+    }
+    .primary-heading{
+        @include respond (phone-after){
+            text-align: left;
+        }
+    }
+    .content-para{
+        @include respond (phone-before){
+            p{
+                text-align: left;
+            }
+                text-align: center;
+        }
+    }
+    .global-btn-two{
+        margin-top: 4rem;
+         @include respond (phone-before){
+                margin-top: 2rem;
+            }
+    }
+    .syllabus-ss{
+        position: relative;
+        @include respond (tab-land-before){
+                margin-top: 3rem;
+            }
+        i{
+            font-size: 4rem;
+            color: $colorWhite;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 2;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            visibility: hidden;
+            scale: 0;
+            transition: $transition;
+        }
+        &:hover{
+            i{
+                 opacity: 1;
+                visibility: visible;
+                scale: 1;
+            }
+            &::before{
+                left: 0;
+                bottom: 0;
+                z-index: 1;
+                border: none;
+                background: rgba(#000, $alpha: 0.6);
+            }
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            border: 6px solid $colorPrimary;
+            width: 100%;
+            height: 100%;
+            bottom: -1.5rem;
+            left: -1.5rem;
+            z-index: -1;
+            transition: $transition;
+            @include respond (phone-before){
+                content: none;
+            }
+        }
+    }
+}

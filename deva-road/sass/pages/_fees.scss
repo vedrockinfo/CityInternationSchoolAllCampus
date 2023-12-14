@@ -1,0 +1,111 @@
+.fees-table{
+    display: block;
+    .fee-table-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include respond (tab-land-before){
+                    grid-template-columns: repeat(1, 1fr);
+                }
+        &:not(:last-child){
+            margin-bottom: 7rem;
+        }
+        .fee-table-item{
+            &.heading{
+                grid-column: span 3;
+                text-align: center;
+                background: $colorPrimary;
+                color: $colorWhite;
+                text-transform: capitalize;
+                padding: 1.4rem 0;
+                font-weight: 600;
+                @include respond (tab-land-before){
+                    grid-column: unset;
+                }
+            }
+            &.grade{
+                grid-column: span 1;
+                @include respond (tab-land-before){
+                    grid-column: unset;
+                }
+                display: grid;
+                place-content: center;
+                background: #FFA62B;
+                color: $colorWhite;
+                @include respond (tab-land-after){
+                    width: 450px;
+                }
+                &.mobile{
+                    @include respond (tab-land-after){
+                        display: none;
+                    }
+                }
+                &.desktop{
+                    @include respond (tab-land-before){
+                        display: none;
+                    }
+                }
+                h2{
+                    font-size: 5rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    text-align: center;
+                    padding: 4rem;
+                    @include respond (tab-port-before){
+                        font-size: 3rem;
+                        padding: 1rem;
+                    }
+                    @include respond (phone-before){
+                        font-size: 2rem;
+                    }
+                }
+            }
+            &.structure{
+                grid-column: span 2;
+                @include respond (tab-land-before){
+                    grid-column: unset;
+                }
+                .installments, .admission{
+                    overflow: auto;
+                }
+                .admission{
+                    td, th{
+                        &:nth-child(1){
+                            width: 70%;
+                        }
+                        &:nth-child(2){
+                            width: 30%;
+                        }
+                    }
+                }
+                .installments{
+                    td, th{
+                        width: 25%;
+                    }
+                }
+                table {
+                    width: 100%;
+                    .month{
+                        text-transform: uppercase;
+                        font-weight: 600;
+    font-size: 1.4rem;
+    
+                    }
+                    thead{
+                        background: $colorSecondary;
+                    }
+                    tr{
+                        border-bottom: 1px solid;
+                    }
+                    td, th{
+                        padding: 1.2rem;
+                        border-right: 1px solid;
+                        border-left: 1px solid;
+                        @include respond (phone-before){
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

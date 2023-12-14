@@ -24,7 +24,7 @@
     padding: 10px 24px;
     line-height: 1;
     text-transform: capitalize;
-    border: 1.9px solid $colorPrimary;
+    border: 1.9px solid $colorPrimary!important;
     background: $colorPrimary;
     color: $colorWhite;
     transition: $transition;
@@ -32,5 +32,20 @@
     &:hover{
         color: $colorPrimary;
         background: transparent;
+    }
+}
+@mixin GlobalButtonThree{
+    font-size: 15px;
+    padding: 10px 24px;
+    line-height: 1;
+    text-transform: capitalize;
+    border: 1.9px solid $colorPrimary!important;
+    background: transparent;
+    color: $colorPrimary;
+    transition: $transition;
+    display: inline-block;
+    &:hover{
+        color: $colorWhite;
+        background: $colorPrimary;
     }
 }

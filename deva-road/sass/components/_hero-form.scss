@@ -1,4 +1,4 @@
-
+.hero-form-area{
 .form-body{
     display: grid;
     justify-content: flex-end;
@@ -118,5 +118,436 @@ button{
             color: $colorBlack;
         }
     }
+}
+}
+}
+
+.admission-process-form{
+    display: grid;
+    justify-content: flex-end;
+    .form-holder {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      form{
+        small{
+            color: rgba($colorWhite, 0.5);
+            font-weight: 300;
+        }
+        .form-check{
+            margin-top: 14px;
+        }
+      }
+      .form-content {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    .form-items {
+    background: #0a6eb2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 25px;
+    display: inline-block;
+    width: 100%;
+    min-width: 420px;
+    @include respond(phone-before){
+      min-width: 80%;
+    }
+    border-radius: 10px;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+h3 {
+    color: $colorWhite;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+h4 {
+    color: $colorWhite;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+h3.form-title {
+    margin-bottom: 30px;
+}
+p {
+    color: $colorWhite;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+    color: $colorWhite;
+    font-size: 1.6rem;
+}
+input[type=text], input[type=password]{
+    width: 100%;
+    padding: 9px 20px;
+    text-align: left;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    background-color: $colorWhite;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8D8D8D;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+button{
+    background: transparent;
+}
+.other-signup-option{
+    .forget{
+        margin: 40px 0 10px 0;
+    }
+    color: rgba($colorWhite, 1);
+    .row{
+        text-align: center;
+    }
+    a{
+        color: rgba($colorWhite, 1);
+        font-weight: 300;
+        font-size: 14px;
+        border-bottom: 1px solid;
+    }
+}
+}
+.mv-up{
+    margin-top: -9px !important;
+    margin-bottom: 8px !important;
+}
+
+.invalid-feedback{
+    color: #ff606e;
+}
+
+.valid-feedback{
+   color: #2acc80;
+}
+}
+}
+
+.alumni-form-area{
+    @include respond (tab-port-before){
+        margin-top: 3rem;
+    }
+        .form-items {
+    background: rgba($colorPrimary, 1);
+    backdrop-filter: blur(7px);
+    padding: 25px;
+    display: inline-block;
+    width: 100%;
+    @include respond(phone-before){
+      min-width: 80%;
+    }
+    border-radius: 10px;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+h3 {
+    color: $colorWhite;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    @include respond (phone-before){
+        font-size: 18px;
+    }
+}
+h3.form-title {
+    margin-bottom: 30px;
+}
+p {
+    color: $colorWhite;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+    color: $colorWhite;
+    font-size: 1.6rem;
+}
+input[type=text], input[type=password], input[type=email], input[type=date], select{
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1rem;
+    border-radius: 2px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $colorWhite;
+    display: block;
+    width: 100%;
+    transition: all 0.3s;
+    margin-top: 16px;
+    color: rgba($colorWhite, 0.8);
+    @include respond (phone-before){
+        padding: 0.5rem 1rem;
+    }
+    &::placeholder{
+        color: rgba($colorWhite, 0.8);
+    }
+    &:focus{
+        box-shadow: none!important;
+    }
+}
+select{
+    appearance: none;
+  -webkit-appearance: none; 
+  background-image: url('../images/down.png');
+  background-size: 10px; 
+  background-repeat: no-repeat;
+  &::-ms-expand {
+  display: none; 
+}
+    option {
+  padding: 10px;
+  color: $colorPrimary;
+}
+}
+input[type=date]{
+    &::-webkit-calendar-picker-indicator{
+        filter: invert(2) sepia(2) brightness(2);
+    }
+}
+textarea {
+    position: static !important;
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-align: left;
+    background-color: $colorWhite;
+    border: 0;
+    font-size: 15px;
+    font-weight: 300;
+    color: $colorPrimary;
+    outline: none;
+    resize: none;
+    height: 120px;
+    -webkit-transition: none;
+    transition: none;
+    margin-bottom: 14px;
+    
+    margin-top: 16px;
+    &:hover, &:focus{
+    border: 0;
+    background-color: #ebeff8;
+    color: colorPrimary;
+}
+}
+button{
+    background: transparent;
+}
+}
+
+.contact-form-area{
+    @include respond (tab-port-before){
+        margin-top: 3rem;
+    }
+        .form-items {
+            border: 1px solid $colorPrimary;
+            border-radius: 10px;
+    padding: 25px;
+    display: inline-block;
+    width: 100%;
+    @include respond(phone-before){
+      min-width: 80%;
+    }
+    border-radius: 10px;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+h3 {
+    color: $colorPrimary;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    @include respond (phone-before){
+        font-size: 18px;
+    }
+}
+h3.form-title {
+    margin-bottom: 30px;
+}
+p {
+    color: $colorWhite;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+    color: $colorWhite;
+    font-size: 1.6rem;
+}
+input[type=text], input[type=password], input[type=email], input[type=date], select{
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1rem;
+    border-radius: 2px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $colorPrimary;
+    display: block;
+    width: 100%;
+    transition: all 0.3s;
+    margin-top: 16px;
+    color: rgba($colorPrimary, 0.8);
+    @include respond (phone-before){
+        padding: 0.5rem 1rem;
+    }
+    &::placeholder{
+        color: rgba($colorPrimary, 0.8);
+    }
+    &:focus{
+        box-shadow: none!important;
+    }
+}
+textarea {
+    position: static !important;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $colorPrimary;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba($colorPrimary, 0.8);
+    outline: none;
+    resize: none;
+    height: 120px;
+    -webkit-transition: none;
+    transition: none;
+    margin-bottom: 14px;
+    
+    margin-top: 16px;
+    &:hover, &:focus{
+    background-color: transparent;
+    color: $colorPrimary;
+}
+}
+}
+
+.career-form-area{
+    @include respond (tab-port-before){
+        margin-top: 3rem;
+    }
+        .form-items {
+    padding: 25px;
+    display: inline-block;
+    width: 100%;
+    @include respond(phone-before){
+      min-width: 80%;
+    }
+    border-radius: 10px;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+h3 {
+    color: $colorPrimary;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    @include respond (phone-before){
+        font-size: 18px;
+    }
+}
+h3.form-title {
+    margin-bottom: 30px;
+}
+p {
+    color: $colorWhite;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+    color: $colorWhite;
+    font-size: 1.6rem;
+}
+input[type=file]{
+    display: none;
+    & + label{
+        background: $colorPrimary;
+        padding: 1.5rem;
+        border-radius: 4rem;
+        width: 250px;
+        text-align: center;
+        margin-top: 3rem;
+        cursor: pointer;
+        @include respond (phone-before){
+            padding: 0.6rem 1.5rem;
+    font-size: 1.4rem;
+    width: auto;
+        }
+    }
+}
+input[type=text], input[type=password], input[type=email], input[type=date], select{
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1rem;
+    border-radius: 2px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $colorPrimary;
+    display: block;
+    width: 100%;
+    transition: all 0.3s;
+    margin-top: 16px;
+    color: rgba($colorPrimary, 0.8);
+    @include respond (phone-before){
+        padding: 0.5rem 1rem;
+    }
+    &::placeholder{
+        color: rgba($colorPrimary, 0.8);
+    }
+    &:focus{
+        box-shadow: none!important;
+    }
+}
+textarea {
+    position: static !important;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $colorPrimary;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba($colorPrimary, 0.8);
+    outline: none;
+    resize: none;
+    height: 120px;
+    -webkit-transition: none;
+    transition: none;
+    margin-bottom: 14px;
+    
+    margin-top: 16px;
+    &:hover, &:focus{
+    background-color: transparent;
+    color: $colorPrimary;
+}
 }
 }

@@ -1,0 +1,122 @@
+.dossier-section{
+    blockquote {
+    padding: 2rem;
+    background: rgba($colorSecondary, 0.6);
+    border-left: 5px solid $colorPrimary;
+    margin-bottom: 7rem!important;
+    strong{
+        color: $colorPrimary;
+    }
+    h2{
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2.4rem;
+        color: $colorPrimary;
+    }
+    }
+    h4.heading-fourth {
+    margin-bottom: 1.5rem;
+}
+.content-attend{
+     &:not(:last-child){
+    margin-bottom: 2rem;
+ @include respond (small-desktop-after){            
+                margin-bottom: 4rem;
+            }
+        }
+    }
+    .dossier-logo{            
+        @include respond (tab-port-after){
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .dossier-card{
+            text-align: center;
+            background: $colorPrimary;
+            min-height: 20rem;
+            display: grid;
+            place-content: center;
+            img{
+                max-width: 10rem;
+                display: block;
+                 margin: auto;
+            }
+            h4{
+                color: $colorWhite;
+                text-transform: uppercase;
+                margin-top: 2rem;
+            }
+        }
+        .content-para ul{
+            li{
+                &:not(:last-child){
+                padding-bottom: 1rem;
+            }
+            }
+        }
+    }
+    .rules-regulation-section{
+        background: $colorPrimary;
+        padding: 7rem 0;
+        @include respond (small-desktop-after){
+            .content-attend{
+            padding-left: 3rem;
+        }
+        }
+        .rules-img img{
+            height: 40rem;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        .content-para ul{
+            li{
+                &::before{
+                    filter: invert(1) sepia(7) brightness(2);
+                }
+                &:not(:last-child){
+                padding-bottom: 1rem;
+            }
+            }
+        }
+    }
+    .connect-with-us{
+        h2{
+            @include respond (tab-port-after){
+                text-align: left;
+            }
+        }
+        .social-media{
+        color: $colorPrimary;
+        margin-top: 3rem;
+        @include respond (tab-port-before){
+            width: 100%;
+            justify-content: center;        
+        }
+        span{
+            text-transform: capitalize;
+            display: block;
+            font-weight: 700;
+        }
+        ul{
+            margin-bottom: 0;
+            padding-left: 0;
+            margin-top: 1.5rem;
+            li{
+                display: inline-block;
+                line-height: 1;
+                &:not(:last-child){
+                    padding-right: 8px;
+                }
+                a{
+                    color: $colorPrimary;
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    }

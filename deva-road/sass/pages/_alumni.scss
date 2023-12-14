@@ -1,0 +1,134 @@
+.alumni-certificate{
+    .alumni-box{
+        position: relative;
+        background: $colorPrimary;
+        text-align: center;
+        min-height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+        transition: all 0.5s;
+        overflow: hidden;
+        &:hover{
+            transform: translateY(-5px);
+        }
+        h4.heading-fourth {
+            margin-bottom: 20px;
+        }
+        h4, a{
+            position: relative;
+        }
+        a{
+            cursor: pointer;
+        }
+        i{
+            color: $colorWhite;
+            position: absolute;
+            right: -30px;
+            bottom: -50px;
+            font-size: 200px;
+            z-index: 0;
+            mix-blend-mode: overlay;
+            opacity: 0.2;
+        }
+    }
+    @include respond (tab-land-before){
+        .col-lg-4:last-child {
+            margin-top: 15px;
+        }
+    }
+    @media screen and (max-width:767.9px){
+        .col-lg-4:first-child {
+            margin-bottom: 15px;
+        }
+    }
+}
+.welcome-alumni{
+    .heading-fourth{
+        margin-bottom: 2rem;
+    }
+    .signature{
+        img{
+            width: 200px;
+            margin: 5rem 0 2rem 0;
+        }
+    }
+    form{
+        .work-detail{
+            margin-top: 3rem;
+        }
+    }
+}
+.alumni-glimpse{
+    .content-para {
+        text-align: center;
+    @media screen and (min-width:1200px) {
+        padding: 0 130px;
+    }
+}
+.glimpse-card{
+    margin-top: 5rem;
+    position: relative;
+    @include respond (phone-before){
+        margin-top: 3rem;
+    }
+    &::after{
+        content: "";
+        background-image: linear-gradient(0deg, $colorPrimary, transparent);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        transition: $transition;
+    }
+    &:hover{
+        &::after{
+            height: 100%;
+        }
+        .sliding-text{
+            clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%);
+        }
+        img{
+            transform: scale(1.3);
+        }
+    }
+    .glimpse-img{
+        overflow: hidden;
+        img{
+            transition: $transition;
+        }
+    }
+    .sliding-text{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $colorPrimary;
+        width: 100%;
+        padding: 30px 0;
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+        z-index: 1;
+        transition: $transition;
+        border-radius: 360px 360px 0 0;
+        h4{
+            text-align: center;
+            color: $colorWhite;
+            margin-bottom: 1rem;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            li{
+                a{
+                    color: $colorWhite;
+                }
+            }
+        }
+    }
+}
+}

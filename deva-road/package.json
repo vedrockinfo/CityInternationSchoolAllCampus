@@ -1,15 +1,13 @@
 {
-  "name": "deva-road",
+  "name": "cis",
   "version": "1.0.0",
-  "description": "Deva Road CIS",
+  "description": "CIS Main ",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "keywords": [
-    "Deva",
-    "Road",
-    "Campus"
+    "CIS"
   ],
   "author": "Vedant",
   "license": "ISC"

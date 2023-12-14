@@ -1,23 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-  window.addEventListener('scroll', function () {
-
-    if (window.scrollY > 300) {
-      document.getElementById('navbar_top').classList.add('fixed-top');
-      // add padding top to show content behind navbar
-      navbar_height = document.querySelector('.navbar').offsetHeight;
-      document.body.style.paddingTop = navbar_height + 'px';
-    } else {
-      document.getElementById('navbar_top').classList.remove('fixed-top');
-      // remove padding top from body
-      document.body.style.paddingTop = '0';
-    }
-  });
+jQuery(window).scroll(function () {
+  if (jQuery(this).scrollTop() > 45) {
+    jQuery("header").addClass("fixed-header");
+  } else {
+    jQuery("header").removeClass("fixed-header");
+  }
 });
 
 
+jQuery(document).ready(function () {
+  jQuery(".glimpse-carousel").owlCarousel();
+  jQuery(".cambride-carousel").owlCarousel();
+  jQuery(".recognition-carousel").owlCarousel();
+});
 
-$('.owl-carousel').owlCarousel({
+
+jQuery('.recognition-carousel').owlCarousel({
   loop: true,
   margin: 30,
   nav: false,
@@ -36,25 +33,59 @@ $('.owl-carousel').owlCarousel({
   }
 })
 
-// Including Header Footer
+$('.glimpse-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: false,
+  dots: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 3
+    },
+    1000: {
+      items: 5
+    }
+  }
+})
 
-// function loadContent(file, elementId) {
-//   var xhr = new XMLHttpRequest();
-//   xhr.onreadystatechange = function () {
-//     if (xhr.readyState == 4 && xhr.status == 200) {
-//       document.getElementById(elementId).innerHTML = xhr.responseText;
-//     }
-//   };
-//   xhr.open("GET", file, true);
-//   xhr.send();
-// }
 
-// loadContent("include/header.html", "header");
-// loadContent("include/footer.html", "footer");
+$('.cambride-carousel').owlCarousel({
+  loop: true,
+  margin: 20,
+  nav: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    1000: {
+      items: 3
+    }
+  }
+})
 
-// loadContent("../include/campus-header.html", "campus-header");
-// loadContent("../include/campus-footer.html", "campus-footer");
-
+$('.testimonial-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 1
+    }
+  }
+})
 
 jQuery(function () {
   jQuery("#header").load("include/header.html");
@@ -65,4 +96,33 @@ jQuery(function () {
 
 window.addEventListener('load', function () {
   document.getElementById('loader').style.display = 'none';
+});
+
+jQuery('.counter-count').each(function () {
+  jQuery(this).prop('Counter', 0).animate({
+    Counter: jQuery(this).text()
+  }, {
+    duration: 5000,
+    easing: 'swing',
+    step: function (now) {
+      jQuery(this).text(Math.ceil(now));
+    }
+  });
+});
+
+
+
+$(document).ready(function () {
+  $(".tab").click(function () {
+    $(".tab").removeClass("active");
+    $(".content").removeClass("active");
+
+    $(this).addClass("active");
+
+    var tabIndex = $(this).index();
+    $(".content").eq(tabIndex).addClass("active");
+  });
+
+  $(".tab:first").addClass("active");
+  $(".content:first").addClass("active");
 });

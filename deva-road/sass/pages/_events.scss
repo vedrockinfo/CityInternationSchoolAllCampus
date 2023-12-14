@@ -1,0 +1,307 @@
+.events-count-down{
+    background: $colorEvents;
+    padding: 6rem 0;
+    .col-md-4{
+        @include respond (tab-port-before){
+            text-align: center;
+        }
+    }
+    .heading-five{
+        color: $colorEvents;
+        border-color: $colorWhite;
+    }
+    .events-para{
+        color: $colorWhite;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+    .events-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        @include respond (small-desktop-after){
+            width: calc(100% - 10rem);
+             margin-left: auto;
+        }
+        &__item{
+            text-align: center;
+            h2{
+                color: $colorWhite;
+                font-size: 9rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                line-height: 7rem;
+                @include respond (tab-land-before){
+                    font-size: 6rem;
+                    margin-bottom: 1rem;
+                    line-height: 6rem;
+                }
+                @include respond (tab-port-before){
+                    font-size: 5rem;
+                    margin-bottom: 1rem;
+                    line-height: 5rem;
+                }
+                @include respond (phone-before){
+                    font-size: 3rem;
+                    margin-bottom: 1rem;
+                    line-height: 3rem;
+                }
+            }
+            span{
+                color: $colorWhite;
+                text-transform: uppercase;
+                font-size: 2rem;
+                @include respond (tab-port-before){
+                    font-size: 1.6rem;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}
+.events-for{
+    h2{
+        @include respond (small-desktop-after){
+            text-align: left!important;
+        }
+    }
+    h3.sub-heading {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: $colorWhite;
+    background: $colorPrimary;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+}
+    .events-image{
+        position: relative;
+        @include respond (tab-port-after){
+            img{
+                width: calc(100% - 14%);
+            }
+        }
+    }
+}
+.join-events{
+    .event-card{
+        @include respond (tab-port-after){
+            &:nth-child(even){
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        }
+        border-radius: 2px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+        height: 25rem;
+        transition: all 300ms ease-out;
+        width: 100%;
+        &:not(:last-child){
+            margin-bottom: 3rem;
+        }
+        &__profile{
+            background: none;
+            float: left;
+            height: 100%;
+            width: 35%;
+            position: relative;
+            @include respond (tab-port-before){
+            width: 100%!important;
+        }
+        }
+        &__profile-pic{
+            background-position: center center;
+            background-size: cover;
+            height: 100%;  
+            &::after{
+                content: " ";
+                display: block;
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transition: all 300ms ease-out;
+                z-index: 10;
+            } 
+        }
+        &__tag{
+            background-color: $colorWhite;
+            border-radius: 2px;
+            padding: 2px 7px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        &__social-list{
+            bottom: 4px;
+            left: 10px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            z-index: 20;
+    li{
+        border-radius: 50%;
+        display: inline-block;
+        height: 30px;
+        margin-right: 6px;
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(5px);
+        transition: all 300ms ease-out;
+        width: 30px;
+    }
+        }
+        &__social-list-notify{
+            border: 1px solid #fff;
+            color: #fff;
+            font-size: 12px;
+            padding-top: 7px;
+            text-align: center;
+            transition-delay: 150ms;
+        }
+        .event-body{
+            background-color: #fff;
+            float: left;
+            height: 100%;
+            padding: 12px 15px;
+            position: relative;
+            width: 65%;
+            @include respond (tab-port-before){
+            width: 100%!important;
+        }
+            &__timing{
+                display: flex;
+                justify-content: space-between;
+                .time{
+                    color: #888;
+                    font-size: 12px;
+                }
+                .social-share{
+                    margin-top: -2px;
+                    opacity: 0;
+                    transition: all 300ms ease-out;
+                    transform: translateY(-5px);
+                    i{
+                        cursor: pointer;
+                        margin-left: 10px;
+                        transition: all 300ms ease-out;
+                    }
+                }
+            }
+            &__heading{
+                display: block;
+                 margin-top: 10px;
+                 h4{
+                    margin-bottom: 1rem;
+                 }
+            }
+            &__venue{
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                opacity: 1;
+                padding: 0 15px;
+                transition: all 300ms ease-out;
+                width: 100%;
+                .venue-name{
+                    color: #888;
+                    font-size: 12px;
+                    display: inline-block;
+                    &.amt{
+                        float: right;
+                    }
+                }
+            }
+            &__tickets{
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                padding: 0 15px;
+                width: 100%;
+                opacity: 0;
+                transform: translateY(8px);
+                transition: all 300ms ease-out;
+                .ticket-types{
+                    color: #888;
+                    font-size: 12px;
+                    display: inline-block;
+                }
+                .tickets-details{
+                    float: right;
+                }
+            }
+        }
+        &:hover{
+            .social-share {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .event-body__tickets {
+                bottom: 10px;
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .event-body__venue {
+                .amt{
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+}
+.unforgettable-moments{
+    .reflecting-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 40rem;
+        gap: 15px;
+        &__item{
+            &:nth-child(2){
+                grid-column: span 2;
+            }
+            &:nth-child(5){
+                grid-row: span 2;
+            }
+            &:nth-child(6){
+                grid-column: span 2;
+            }
+            &:nth-child(7){
+                grid-row: span 2;
+            }
+            .photo-shoot{
+                overflow: hidden;height:100%;
+                img{
+                    transition: $transition;
+                    object-fit: cover;
+                    height: 100%;
+                    object-position: center center;
+                    width: 100%;
+                    &:hover{
+                        transform: scale(1.5);
+                    }
+                }
+            }
+        }
+    }
+    .ach-exp {
+    width: fit-content;
+    margin-top: 7rem;
+    margin-left: auto;
+    margin-right: auto;
+    @include respond(tab-land-before){
+      margin-top: 5rem;
+    }
+    @include respond(tab-port-before){
+      margin-top: 3rem;
+    }
+}
+}
