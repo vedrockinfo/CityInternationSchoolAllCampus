@@ -1,0 +1,45 @@
+main.contact-page {
+    & + div#footer footer{
+    margin-top: 0;
+}
+.content-para {
+    @include respond (small-desktop-after){
+        padding: 0 130px;
+    }
+    margin-bottom: 5rem;
+    @include respond (tab-port-before){
+        margin-bottom: 3rem;
+    }
+}
+.contact-list {
+    display: grid;
+    gap: 5rem;
+     background: $colorPrimary;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 3rem;
+        border-radius: 2rem;
+        @include respond (tab-port-after){
+            width: calc(100% - 80px);
+        }
+    @include respond (tab-port-before){
+        gap: 3rem;
+    }
+    .contact-list-items{
+        color: $colorWhite;
+        text-align: center;
+        a, p{
+            color: $colorWhite;
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        .c-icon {
+            padding-bottom: 2rem;
+            img{
+                width: 60px;
+                margin: auto;
+            }
+        }
+    }
+}
+}

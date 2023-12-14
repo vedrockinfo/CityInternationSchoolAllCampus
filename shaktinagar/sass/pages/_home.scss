@@ -1,0 +1,412 @@
+.hero-section {
+	.sliding-area{
+		min-height: calc(100vh - 212px);
+		display: grid;
+    	align-items: center;
+		position: relative;
+		@include respond (tab-port-before){
+			padding: 0 30px;
+		}
+		&::before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba($color: #000000, $alpha: 0.7);
+		}
+		.container{
+			position: relative;
+		}
+	}
+	button.owl-prev, button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+	button.owl-prev{
+		left:0;
+	}
+
+	button.owl-next{
+		right:0;
+	}
+
+	.owl-nav button{
+		padding:20px;
+	}
+
+	.owl-nav i {
+		color:$colorWhite;
+		background:$colorPrimary;
+		width: 30px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 16px;
+		line-height: 0;
+		transition: $transition;
+		&:hover{
+			color: $colorPrimary;
+			background: $colorWhite;
+		}
+	}
+	.slide-btn {
+    margin-top: 30px;
+	text-align: center;
+	display: flex;
+    justify-content: center;
+    gap: 30px;
+	@include respond (phone-before){
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+}
+.s-future{
+	h2, h6{
+		@include respond (tab-land-after){
+			text-align: left;
+		}
+	}
+	.col-md-6 button[type=button]{
+		border: none;
+		background: transparent;
+	}
+	.external-video{
+		position: relative;
+		@include respond (tab-land-before){
+			margin-top: 3rem;
+		}
+		&::before{
+			content: "";
+			background: transparent;
+			border: 10px solid $colorPrimary;
+			width: calc(100% - 40px);
+			height: 100%;
+			right: 0;
+			top: 40px;
+			position: absolute;
+			@include respond (tab-land-before){
+				display: none;
+				content: none;
+			}
+		}
+	}
+	.video-thumb{
+		position: relative;
+		img{
+			@include respond (tab-land-after){
+				width: calc(100% - 40px);
+			}
+		}
+		i{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: $colorWhite;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			display: grid;
+			place-content: center;
+			font-size: 25px;
+			color: $colorPrimary;z-index: 2;
+		}
+		&::before, &::after{
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			display: block;
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background-color: $colorWhite;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		&::before{
+			animation: pulse-border 1500ms ease-out infinite;
+		}
+		&:after{
+			transition: all 200ms;
+		}
+	}
+	button.btn-close {
+    position: absolute;
+    right: -25px;
+    top: -25px;
+	&:focus{
+		box-shadow: none;
+		outline: none;
+		border: none;
+	}
+	i{
+		color: $colorWhite;
+	}
+}
+.modal.fade {
+    backdrop-filter: blur(15px);
+}
+.modal-content{
+	height: 80vh;
+}
+}
+.outside-thinker{
+	padding-top: 40px;
+	.row.mt-5{
+		@include respond (tab-port-before){
+			gap: 3rem;
+		}
+	}
+	.single-service-item{
+		padding: 40px 20px;
+    	transition: all 500ms ease;
+		width: calc(100% - 20px);
+    margin: auto;
+		&:hover{
+			transform: scale(1.06);
+			.service-item-icon-bg{
+				border-color: $colorPrimary!important;
+				i::before{
+					border-color: $colorPrimary!important;
+				}
+			}
+		}
+		.icon-holder{
+			.service-item-icon-bg{
+				background: $colorWhite;
+				display: block;
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				margin: 0 auto;
+				padding: 14px;
+				border: 1px solid transparent;
+				transition: all 500ms ease;
+				transition-delay: 0.10s;
+				i{
+					&::before{
+						color: $colorPrimary;
+						display: block;
+						font-size: 50px;
+						text-align: center;
+						line-height: 30px;
+						background: $colorWhite;
+						width: 90px;
+						height: 90px;
+						border-radius: 50%;
+						padding: 30px 0;
+						border: 1px solid transparent;
+						transition: all 500ms ease;
+						transition-delay: 0.15s;
+					}
+				}
+			}
+		}
+		.service-item-text-holder{
+
+		}
+	}
+}
+.inspiring-life{
+	padding: 7rem 0;
+	background-image: url(https://ft.bazardeal.com.bd/nk/nekaton-preview-4/nekaton/assets/img/bg/counter-bg.jpg);
+	background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+	position: relative;
+	&::before{
+		content: "";
+		background: rgba($color: #000000, $alpha: 0.7);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.container{
+		position: relative;
+	}
+    .service-item {
+    position: relative;
+    padding: 40px 30px 30px 30px;
+	background: rgba($colorWhite, 1);
+    &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-image: linear-gradient(90deg, $colorSecondary 7.5%,  rgba($colorSecondary, 1) 7.5%);
+}
+&:hover{
+    h4{
+        color: $colorPrimary;
+    }
+}
+}
+.icon {
+   width: 9rem;
+    height: 9rem;
+    position: relative;
+    margin-right: 50px;
+    line-height: 1.3;
+    border-radius: 50%;
+    flex-shrink: 0;
+    z-index: 0;
+    text-align: center;
+    border: 4px solid #fff;
+    outline: 4px solid;
+    span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 5rem;
+        color: $colorWhite;
+        font-weight: 700;
+    }
+    &.way-1{
+        background: #1f4b96;
+        outline-color: #1f4b96;
+    }
+    &.way-2{
+        background: #075792;
+        outline-color: #075792;
+    }
+    &.way-3{
+        background: #0a6d94;
+        outline-color: #0a6d94;
+    }
+    &.way-4{
+        background: #077a8d;
+        outline-color: #077a8d;
+    }
+    &.way-5{
+        background: #117c6a;
+        outline-color: #117c6a;
+    }
+    &.way-6{
+        background: #159655;
+        outline-color: #159655;
+    }
+    &.way-7{
+        background: #348934;
+        outline-color: #348934;
+    }
+    &.way-8{
+        background: #5b9131;
+        outline-color: #5b9131;
+    }
+    &.way-9{
+        background: #7da02a;
+        outline-color: #7da02a;
+    }
+    &.way-10{
+        background: #8a951f;
+        outline-color: #8a951f;
+    }
+    &.way-11{
+        background: #c5701d;
+        outline-color: #c5701d;
+    }
+    &.way-12{
+        background: #ca5220;
+        outline-color: #ca5220;
+    }
+    &.way-13{
+        background: #c23a24;
+        outline-color: #c23a24;
+    }
+    &.way-14{
+        background: #d73d21;
+        outline-color: #d73d21;
+    }
+    &.way-15{
+        background: #91241f;
+        outline-color: #91241f;
+    }
+    &.way-16{
+        background: #a61e4c;
+        outline-color: #a61e4c;
+    }
+    &.way-17{
+        background: #9c1e67;
+        outline-color: #9c1e67;
+    }
+    &.way-18{
+        background: #6e1f4c;
+        outline-color: #6e1f4c;
+    }
+    &.way-19{
+        background: #5e2f7f;
+        outline-color: #5e2f7f;
+    }
+    &.way-20{
+        background: #3b2c6d;
+        outline-color: #3b2c6d;
+    }
+    &::before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    background: rgba($colorPrimary, 0.3);
+    border-radius: 50px;
+    z-index: 1;
+    bottom: -15px;
+    right: -15px;
+    transition: 0.3s;
+    mix-blend-mode: color-dodge;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    padding: 7px;
+    object-position: center;
+}
+}
+h4.title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: $colorPrimary;
+    transition: $transition;
+}
+.content-para{
+    margin-bottom: 3rem;
+    text-align: center;
+        transition: $transition;
+    @media screen and (min-width:992px) {
+        padding: 0 200px;
+    }
+}
+.owl-nav {
+    display: flex;
+    justify-content: flex-end;
+	gap: 6px;
+	button i{
+		background: transparent;
+		border: 1px solid rgba($colorWhite, 1);
+		height: 30px;
+		width: 30px;
+		display: grid;
+		color: rgba($colorWhite, 1);
+		transition: $transition;
+		place-content: center;
+		&:hover{
+			background: rgba($colorWhite, 1);
+			color: $colorHeading;
+		}
+	}
+}
+}

@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.555;
     color: $colorText;
   }
 
@@ -15,16 +14,32 @@ body {
   h4,
   h5,
   h6{
-    font-family: 'Montserrat', sans-serif!important;
+    font-family: 'Poppins', sans-serif!important;
   }
-  h2.primary-heading {
-    line-height: 1.25em;
+  
+  .sub-heading {
     text-align: center;
-    margin-bottom: 40px;
-    text-transform: capitalize;
-    font-size: 48px;
+    text-transform: uppercase;
+    font-size: 14px;
     font-weight: 700;
     color: $colorPrimary;
+    @include respond(tab-land-before){
+      font-size: 14px;
+    }
+    @include respond(tab-port-before){
+      font-size: 14px;
+    }
+    @include respond(phone-before){
+      font-size: 14px;
+    }
+}
+  h2.primary-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-size: 36px;
+    font-weight: 700;
+    color: $colorHeading;
     @include respond(tab-land-before){
       margin-bottom: 40px;
       font-size: 36px;
@@ -39,12 +54,12 @@ body {
     }
 }
 
-  .hero-primary-heading {
+  .heading-hero-primary {
     text-transform: uppercase;
-    font-size: 72px;
+    font-size: 60px;
+    text-align: center;
     font-weight: 700;
     color: $colorWhite;
-    text-align: center;
     line-height: 1.26;
     @include respond(tab-land-before){
       font-size: 48px;
@@ -56,28 +71,22 @@ body {
       font-size: 30px;
     }
 }
-.hero-secondary-heading {
-    text-transform: uppercase;
-    font-size: 48px;
+.heading-hero-secondary {
+    text-transform: capitalize;
+    font-size: 18px;
     font-weight: 200;
     color: $colorWhite;
     text-align: center;
     line-height: 1.26;
-    @include respond(tab-land-before){
-      font-size: 36px;
-    }
-    @include respond(tab-port-before){
-      font-size: 30px;
-    }
     @include respond(phone-before){
-      font-size: 24px;
+      font-size: 16px;
     }
 }
 
 .heading-fourth {
     line-height: 1.25em;
-    margin-bottom: 0;
-    font-size: 24px;
+    margin-bottom: 20px;
+    font-size: 20px;
     font-weight: 700;
     color: $colorPrimary;
 }
@@ -92,9 +101,16 @@ body {
     color: $colorPrimary;
     text-transform: uppercase;
 }
+.heading-fifth{
+    font-size: 14px;
+    font-weight: normal;
+    font-style: oblique;
+    letter-spacing: 0.5px;
+    color: $footerBG;
+}
 .content-para p, .content-para li {
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 30px;
   font-weight: normal;
   &:last-child{
     margin-bottom: 0;
