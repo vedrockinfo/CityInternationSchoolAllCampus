@@ -59,8 +59,8 @@ ul {
   #loader .loader-spinner {
     width: 48px;
     height: 35px;
-    color: #8e4bff;
-    background: #8e4bff;
+    color: #0a6eb2;
+    background: #0a6eb2;
     border-radius: 50% 50% 20% 20%;
     position: relative;
     margin-top: 36px;
@@ -73,7 +73,7 @@ ul {
       width: 28px;
       height: 31px;
       border-radius: 50%;
-      background: #8e4bff;
+      background: #0a6eb2;
       top: -34px;
       animation: animloader108s 4s linear infinite; }
 
@@ -99,7 +99,7 @@ h2.primary-heading {
   text-transform: capitalize;
   font-size: 48px;
   font-weight: 700;
-  color: #8e4bff; }
+  color: #0a6eb2; }
   @media only screen and (max-width: 992px) {
     h2.primary-heading {
       margin-bottom: 40px;
@@ -169,17 +169,17 @@ h2.primary-heading {
   margin-bottom: 0;
   font-size: 24px;
   font-weight: 700;
-  color: #8e4bff; }
+  color: #0a6eb2; }
 
 .heading-five {
   line-height: 1.25em;
   margin-bottom: 20px;
   font-size: 14px;
-  border: 1px solid #8e4bff;
+  border: 1px solid #0a6eb2;
   padding: 2px 10px;
   border-radius: 20px;
   font-weight: 600;
-  color: #8e4bff;
+  color: #0a6eb2;
   text-transform: uppercase; }
 
 .content-para p, .content-para li {
@@ -234,30 +234,30 @@ h2.primary-heading {
 .inner-hero-section {
   position: relative;
   padding: calc(10rem + 90.36px) 0 10rem;
-  background: #8e4bff; }
+  background: #0a6eb2; }
 
 .btn-one {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 600;
-  background: #8e4bff;
+  background: #0a6eb2;
   color: #f9f9f9;
   display: inline-block;
   padding: 8px 20px;
-  border: 2px solid #8e4bff;
+  border: 2px solid #0a6eb2;
   transition: 0.4s ease;
   border-radius: 30px; }
   .btn-one:hover {
     background: transparent;
-    color: #8e4bff;
-    border: 2px solid #8e4bff; }
+    color: #0a6eb2;
+    border: 2px solid #0a6eb2; }
 
 .btn-two {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 600;
   background: #f9f9f9;
-  color: #8e4bff;
+  color: #0a6eb2;
   display: inline-block;
   padding: 8px 20px;
   border: 2px solid #f9f9f9;
@@ -302,7 +302,7 @@ h2.primary-heading {
     .admission-form form .form-control::placeholder {
       color: #2F2F2F; }
     .admission-form form .form-control:hover, .admission-form form .form-control:active, .admission-form form .form-control:focus {
-      border-bottom: 1px solid #8e4bff;
+      border-bottom: 1px solid #0a6eb2;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; }
   .admission-form form select {
     position: relative; }
@@ -313,7 +313,7 @@ h2.primary-heading {
       top: 0;
       font-size: 20px; }
   .admission-form .text-center strong {
-    color: #8e4bff;
+    color: #0a6eb2;
     cursor: pointer; }
   .admission-form .verify-row {
     display: flex;
@@ -322,16 +322,16 @@ h2.primary-heading {
     margin-bottom: 1rem; }
     .admission-form .verify-row .help {
       cursor: pointer;
-      color: #8e4bff; }
+      color: #0a6eb2; }
     .admission-form .verify-row .backnum {
       cursor: pointer;
-      color: #8e4bff; }
+      color: #0a6eb2; }
   .admission-form .resend {
     text-align: right;
     font-size: 1.2rem;
     margin: 10px 0;
     display: block;
-    color: #8e4bff;
+    color: #0a6eb2;
     cursor: pointer;
     transition: 0.4s ease; }
     .admission-form .resend:hover {
@@ -342,7 +342,7 @@ h2.primary-heading {
     position: fixed;
     top: 10rem;
     right: 2rem;
-    background: #8e4bff;
+    background: #0a6eb2;
     color: #f9f9f9;
     padding: 4px 20px;
     font-size: 1.4rem;
@@ -388,7 +388,7 @@ footer {
       margin: 0; }
 
 .top-header {
-  background: #8e4bff;
+  background: #0a6eb2;
   padding: 10px 0; }
   .top-header .col-md-4:last-child {
     text-align: right; }
@@ -440,8 +440,8 @@ header {
     padding-top: 8px;
     padding-bottom: 8px; }
   header .navbar-nav li.nav-item.admission {
-    background: #8e4bff;
-    border: 2px solid #8e4bff;
+    background: #0a6eb2;
+    border: 2px solid #0a6eb2;
     transition: 0.4s ease;
     border-radius: 10px; }
     @media screen and (min-width: 992px) {
@@ -450,7 +450,7 @@ header {
     header .navbar-nav li.nav-item.admission:hover {
       background: transparent; }
       header .navbar-nav li.nav-item.admission:hover a {
-        color: #8e4bff; }
+        color: #0a6eb2; }
     header .navbar-nav li.nav-item.admission a {
       color: #f9f9f9;
       padding-left: 30px;
@@ -466,10 +466,10 @@ header {
     margin-top: 3rem; } }
 
 .management-card {
-  border: 2px solid #8e4bff;
+  border: 2px solid #0a6eb2;
   padding: 2rem 2rem;
   border-radius: 1rem;
-  background: rgba(142, 75, 255, 0.1);
+  background: rgba(10, 110, 178, 0.1);
   backdrop-filter: blur(10px); }
   @media screen and (min-width: 768px) {
     .management-card {
@@ -490,7 +490,7 @@ header {
       width: 20rem;
       height: 20rem;
       border: 4px solid #f9f9f9;
-      outline: 2px solid #8e4bff;
+      outline: 2px solid #0a6eb2;
       object-fit: cover; }
 
 .ipsative-section {
@@ -535,7 +535,7 @@ header {
       margin: 30px 0 50px; } }
 
 .founder-concept a {
-  color: #8e4bff; }
+  color: #0a6eb2; }
 
 @media only screen and (max-width: 768px) {
   .founder-concept .sgandhi {
@@ -544,7 +544,7 @@ header {
 
 .founder-concept .sgandhi img {
   border-radius: 50%;
-  outline: 3px solid #8e4bff;
+  outline: 3px solid #0a6eb2;
   border: 3px solid #f9f9f9; }
 
 @media screen and (min-width: 767.9px) {
@@ -557,7 +557,7 @@ header {
   .founder-concept .found-book-cover::before {
     content: "";
     background: transparent;
-    border: 5px solid #8e4bff;
+    border: 5px solid #0a6eb2;
     position: absolute;
     top: 2rem;
     left: -2rem;
@@ -663,7 +663,7 @@ header {
   column-gap: 50px;
   margin-top: 20px; }
   .admission ul.primary-list.grid strong {
-    color: #8e4bff; }
+    color: #0a6eb2; }
 
 .admission .heading-fourth {
   color: #2F323A;
@@ -683,7 +683,7 @@ header {
   .azadi-pics .content-para p:first-child::first-letter {
     font-size: 6rem;
     font-weight: 700;
-    color: #8e4bff; }
+    color: #0a6eb2; }
 
 .azadi-pics .azadi-pics-grid {
   display: grid;
@@ -712,7 +712,7 @@ header {
   .form-control::placeholder {
     color: rgba(0, 0, 0, 0.3) !important; }
   .form-control:focus, .form-control:active {
-    border-color: #8e4bff !important;
+    border-color: #0a6eb2 !important;
     background: #f9f9f9; }
 
 textarea.form-control {
@@ -743,12 +743,12 @@ textarea.form-control {
       font-weight: 500;
       color: #333333; }
     .dbox p a {
-      color: #8e4bff; }
+      color: #0a6eb2; }
   .dbox .icon {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: #8e4bff;
+    background: #0a6eb2;
     margin: 0 auto;
     margin-bottom: 20px; }
     .dbox .icon span {
@@ -820,7 +820,7 @@ textarea.form-control {
         .hero-section .container .row .col-md-6:last-child {
           align-self: flex-end; } }
   .hero-section span.primary {
-    background: #8e4bff;
+    background: #0a6eb2;
     position: absolute; }
     .hero-section span.primary.one {
       width: 55rem;
@@ -837,7 +837,7 @@ textarea.form-control {
       transform: translate(40%, -70%) rotate(64deg);
       border-radius: 5rem; }
   .hero-section span.secondary {
-    background: #daed39;
+    background: #cc3438;
     width: 30rem;
     height: 30rem;
     position: absolute;
@@ -852,7 +852,7 @@ textarea.form-control {
     text-transform: uppercase;
     line-height: 65px; }
     .hero-section h1 span {
-      color: #8e4bff; }
+      color: #0a6eb2; }
   .hero-section .heading-six {
     font-weight: 500;
     color: #333333;
@@ -874,9 +874,9 @@ textarea.form-control {
     left: 0;
     right: 0;
     height: 2px;
-    background-image: linear-gradient(90deg, #8e4bff 7.5%, rgba(47, 47, 47, 0.4) 7.5%); }
+    background-image: linear-gradient(90deg, #0a6eb2 7.5%, rgba(47, 47, 47, 0.4) 7.5%); }
   .about .service-item:hover h4 {
-    color: #8e4bff; }
+    color: #0a6eb2; }
 
 .about .icon {
   width: 9rem;
@@ -963,7 +963,7 @@ textarea.form-control {
     content: "";
     height: 30px;
     width: 30px;
-    background: rgba(218, 237, 57, 0.3);
+    background: rgba(204, 52, 56, 0.3);
     border-radius: 50px;
     z-index: 1;
     bottom: -15px;
@@ -982,7 +982,7 @@ textarea.form-control {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
-  color: #8e4bff;
+  color: #0a6eb2;
   transition: 0.4s ease; }
 
 .about .content-para {
@@ -994,7 +994,7 @@ textarea.form-control {
       padding: 0 200px; } }
 
 .icons-area {
-  background: #8e4bff; }
+  background: #0a6eb2; }
   .icons-area .icon-card {
     text-align: center;
     padding: 7rem 35px; }
@@ -1021,7 +1021,7 @@ textarea.form-control {
 .at-glance {
   position: relative; }
   .at-glance .tertiary {
-    background: #daed39;
+    background: #cc3438;
     width: 30rem;
     height: 30rem;
     position: absolute;
@@ -1032,7 +1032,7 @@ textarea.form-control {
     z-index: 3; }
 
 .academic-section {
-  background: #8e4bff;
+  background: #0a6eb2;
   padding: 7rem 0; }
   @media only screen and (max-width: 992px) {
     .academic-section {
