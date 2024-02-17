@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CIS : Gallery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./vendor/css/viewbox.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body>
-    
+    <div id="header"></div>
+    <div id="loader">
+        <div class="loader-spinner">
+            <img src="images/loader.gif" alt="">
+        </div>
+    </div>
+    <main>
+        <section class="inner-hero-section"
+            style="background-image: url(https://subharti.org/includes/assets/images/5.jpg);">
+            <div class="container">
+                <h1 class="hero-primary-heading">gallery</h1>
+            </div>
+        </section>
+        <section class="mt-large">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <a href="images/gallery/i1.jpg" class="thumbnail" title="San Francisco">
+                            <img src="images/gallery/i1-thumb.jpg" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="images/gallery/i2.jpg" class="thumbnail" title="Rotterdam">
+                            <img src="images/gallery/i2-thumb.jpg" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="images/gallery/i3.jpg" class="thumbnail"
+                            data-viewbox-title="&lt;a href=&quot;https://www.nycgo.com/&quot;&gt;New York&lt;/a&gt;">
+                            <img src="images/gallery/i3-thumb.jpg" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="images/gallery/i4.jpg" class="thumbnail" title="Istanbul">
+                            <img src="images/gallery/i4-thumb.jpg" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="vendor/js/jquery.min.js"></script>
+    <script src="vendor/js/bootstrap.min.js"></script>
+    <script src="vendor/js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="vendor/js/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="./vendor/js/jquery.viewbox.min.js"></script>
+    <script>
+        $(function () {
+
+            $('.thumbnail').viewbox();
+            $('.thumbnail-2').viewbox({ fullscreenButton: true });
+
+            (function () {
+                var vb = $('.popup-link').viewbox();
+                $('.popup-open-button').click(function () {
+                    vb.trigger('viewbox.open');
+                });
+                $('.close-button').click(function () {
+                    vb.trigger('viewbox.close');
+                });
+            })();
+
+        });
+    </script>
 </body>
+
 </html>
