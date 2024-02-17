@@ -1,0 +1,148 @@
+.schools-cats {
+    .container{
+        @include DeviceMinimum992{
+            width: 95rem;
+        }
+    }
+    .card {
+        display: block;
+        border: 0px;
+        border-radius: 15px;
+        background: var(--vlr);
+        text-align: center;
+
+
+        &__title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: $colorWhite;
+            letter-spacing: 0.3px;
+            padding-top: 3rem;
+
+            @include DeviceMaximum768 {
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+        }
+
+        &__text {
+            font-size: 1.6rem;
+            font-weight: normal;
+            color: $colorWhite;
+            letter-spacing: 0.3px;
+            padding: 0 3rem 2rem;
+
+            @include DeviceMaximum768 {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+
+        .link-one{
+            a{
+                color: var(--vlr);
+                &:hover{
+                    color: $colorWhite;
+                }
+            }
+        }
+
+        &__imgwrapper {
+            margin-top: 5rem;
+
+            img {
+                border-radius: 30% 70% 15px 15px;
+                height: 22rem;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                filter: brightness(2);
+            }
+        }
+    }
+}
+.school-franchise{
+    .blockquote{
+        .ashok{
+            text-align: right;
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+    }
+    .img-fluid{
+        width: calc(100% - 1rem);
+        margin: auto;
+        box-shadow: $boxShadowOne;
+    }
+}
+.survey{
+    padding: 7rem 0;
+    @include DeviceMaximum768{
+        padding: 4rem 0;
+    }
+    background: $colorTertiary;
+    position: relative;
+    &::before{
+            content: "";
+    background-image: url(../img/Background.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    mix-blend-mode: color-burn;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+        }
+    .container{
+        @include DeviceMinimum992{
+            width: 80rem;
+        }
+    }
+    .container{
+            position: relative;
+            z-index: 2;
+        }
+    .survey-link{
+        background: lighten($colorTertiary, $amount:10);
+        height: 10rem;
+        display: grid;
+        place-content: center;
+        position: relative;
+        box-shadow: $boxShadowOne;
+        &:hover{
+            i{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        i{
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: $colorTertiary;
+            background: $colorWhite;
+            width: 2rem;
+            height: 2rem;
+            display: grid;
+            place-content: center;
+            border-radius: 0 0 0 13px;
+            opacity: 0;
+            visibility: hidden;
+            transition: $transition04s;
+        }
+        a{
+            color: $colorWhite;
+            text-decoration: none;
+            text-align: center;
+            padding: 1rem;
+            display: block;
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+    }
+}

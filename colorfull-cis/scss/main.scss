@@ -1,0 +1,19 @@
+@import "../scss/abstract/functions";
+@import "../scss/abstract/mixins";
+@import "../scss/abstract/variables";
+
+@import "../scss/base/animation";
+@import "../scss/base/base";
+@import "../scss/base/fonts";
+@import "../scss/base/typography";
+@import "../scss/base/utilities";
+
+@import "../scss/components/button";
+
+@import "../scss/layout/footer";
+@import "../scss/layout/header";
+
+@import "../scss/pages/home";
+@import "../scss/pages/startschools";
+@import "../scss/pages/target-plus";
+@import "../scss/pages/who-we-are";

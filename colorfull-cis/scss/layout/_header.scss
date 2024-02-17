@@ -1,0 +1,125 @@
+header {
+    .topHeader {
+        background: $colorbgLight;
+        padding: 1rem 0;
+
+        .header-social-icons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                background: var(--fclr);
+                border-radius: 50%;
+
+                a {
+                    color: #fff;
+                    width: 3rem;
+                    height: 3rem;
+                    display: grid;
+                    place-content: center;
+                    font-size: 0.9rem;
+                    text-decoration: none;
+
+                    i {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+
+        .searchForm {
+            position: relative;
+
+            @include DeviceMinimum576 {
+                width: 30rem;
+                margin-left: auto;
+            }
+
+            .form-control {
+                border-radius: 40px;
+                height: 4.2rem;
+                padding: 0 20px;
+                font-size: 1.2rem;
+
+                &:focus {
+                    border-color: $colorSecondary;
+                }
+            }
+
+            .input-group-btn {
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .navbar {
+        .navbar-brand{
+            img{
+                width: 15rem;
+            }
+        }
+        i.fa-solid.fa-bars{
+            @include DeviceMaximum992{
+                color: $colorWhite;
+            }
+        }
+        .navbar-toggler {
+            &:focus {
+                border: none !important;
+                box-shadow: none;
+            }
+        }
+
+        .dropdown {
+            &:hover {
+                .dropdown-menu {
+                    @include DeviceMinimum992 {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .navbar-nav {
+            .nav-item {
+                &:not(:last-child){
+                    padding-right: 2rem;
+                }
+                a {
+                    color: $colorSecondary;
+                    transition: $transition04s;
+
+                    &:hover {
+                        color: $colorTertiary;
+                    }
+                }
+                ul.dropdown-menu{
+                    border: none;
+                    border-radius: 0;
+                    box-shadow: $boxShadowOne;
+                    a{
+                        &:focus{
+                            background: $colorSecondary;
+                            color: $colorWhite;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.fixed-top {
+            top: -40px;
+            transform: translateY(40px);
+            transition: transform .3s;
+            background: $colorWhite;
+        }
+    }
+}

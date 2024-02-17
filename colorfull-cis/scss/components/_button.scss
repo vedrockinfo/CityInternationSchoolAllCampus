@@ -1,0 +1,99 @@
+.link-one a {
+  background: $colorWhite;
+  color: $colorSecondary;
+  border: 1px solid $colorWhite;
+  border-radius: 30px;
+  transition: $transition04s;
+  text-transform: uppercase;
+  display: inline-block;
+    font-weight: 600;
+    padding: 11.7px 40px;
+    font-size: 1.4rem;
+  @include DeviceMaximum768 {
+    margin: auto;
+  }
+  &:hover {
+    background: transparent;
+    border: 1px solid $colorWhite;
+    color: $colorWhite;
+  }
+}
+
+.link-two{
+  text-align: center;
+   a {
+  background: $colorTertiary;
+  color: $colorWhite;
+  border: 1px solid $colorTertiary;
+  border-radius: 30px;
+  transition: $transition04s;
+  display: inline-block;
+  margin: auto;
+  padding: 6px 30px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  @include DeviceMaximum768 {
+    padding: 11.7px 30px;
+  }
+  &:hover {
+    background: transparent;
+    color: $colorTertiary;
+    border: 1px solid $colorTertiary;
+  }
+}
+}
+
+button.submit-btn {
+  background-image: $gradientOne;
+  color: $colorWhite;
+  border: 1px solid $colorPrimary;
+  border-radius: 30px;
+  transition: $transition04s;
+  width: 200px;
+  text-transform: uppercase;
+  height: 40px;
+  font-size: 16px;
+  display: grid;
+  margin: 31px auto 0;
+  place-content: center;
+  @include DeviceMaximum768 {
+    width: auto;
+    height: 40px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  &:hover {
+    background: transparent;
+    border: 1px solid $colorPrimary;
+    color: $colorPrimary;
+  }
+}
+.view-profile{
+  text-align: center;
+  a{
+    text-transform: uppercase;
+    background: transparent;
+    color: $colorPrimary;
+    border-color: $colorPrimary;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50px 50px 50px 50px;
+    padding: 10px 30px;
+    font-weight: 500;
+    transition: all 0.5s;
+    &:hover{
+      border-color: #096841;
+      color: #096841;
+    }
+  }
+}
+
+.internal-link{
+    color: $colorPrimary;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+      color: $colorSecondary;
+    }
+  }

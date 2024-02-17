@@ -1,0 +1,106 @@
+html {
+  font-size: 62.5%;
+}
+
+a,
+p,
+li,
+span {
+  font-size: 1.5rem;
+  letter-spacing: 0.3px;
+  line-height: 1.857138;
+
+  @include DeviceMaximum768 {
+    font-size: 1.3rem;
+  }
+}
+
+.primaryHeading{
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: $colorWhite;
+  text-align: left;
+
+  @include DeviceMaximum768 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+}
+
+.primaryContent{
+  font-size: 2rem;
+  font-weight: 500;
+  color: $colorWhite;
+  text-align: left;
+
+  @include DeviceMaximum768 {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.3;
+    margin-top: 10px;
+  }
+}
+
+.headingTwo {
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: $colorheading;
+  span{
+    font: inherit;
+    color: $colorTertiary;
+  }
+
+  @include DeviceMaximum768 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+.headingThree {
+  font-size: 2rem;
+  font-weight: 600;
+  color: $colorheading;
+
+  @include DeviceMaximum768 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+.headingFour {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $colorTertiary;
+  text-align: center;
+  letter-spacing: 0.3px;
+
+  @include DeviceMaximum768 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+.headingFive {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: $colorheading;
+}
+
+.headingSix {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: $colorheading;
+  text-align: center;
+}
+
+blockquote.blockquote {
+    background: rgba($colorTertiary, $alpha: 0.1);
+    padding: 30px 20px;
+    display: inline-block;
+    border-left: 4px solid $colorTertiary;
+    em{
+      font-size: 1.8rem;
+    }
+}
