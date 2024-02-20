@@ -1,5 +1,5 @@
 .events-count-down{
-    background: $colorRed;
+    background: $colorEvents;
     padding: 6rem 0;
     .col-md-4{
         @include respond (tab-port-before){
@@ -7,7 +7,7 @@
         }
     }
     .heading-five{
-        color: $colorRed;
+        color: $colorEvents;
         border-color: $colorWhite;
     }
     .events-para{

@@ -24,13 +24,13 @@
     padding: 10px 24px;
     line-height: 1;
     text-transform: capitalize;
-    border: 1.9px solid $colorPurple!important;
-    background: $colorPurple;
+    border: 1.9px solid $colorPrimary!important;
+    background: $colorPrimary;
     color: $colorWhite;
     transition: $transition;
     display: inline-block;
     &:hover{
-        color: $colorPurple;
+        color: $colorPrimary;
         background: transparent;
     }
 }
@@ -39,13 +39,13 @@
     padding: 10px 24px;
     line-height: 1;
     text-transform: capitalize;
-    border: 1.9px solid $colorPurple;
+    border: 1.9px solid $colorPrimary!important;
     background: transparent;
-    color: $colorPurple;
+    color: $colorPrimary;
     transition: $transition;
     display: inline-block;
     &:hover{
         color: $colorWhite;
-        background: $colorPurple;
+        background: $colorPrimary;
     }
 }
